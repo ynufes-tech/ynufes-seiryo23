@@ -77,7 +77,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-out;
 
   #overture-text {
     position: absolute;
@@ -111,14 +111,17 @@
 <style lang="scss">
 body {
   background: #fffdf5;
-  margin: 0;
-  padding: 0;
 }
 
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
   #header-mobile {
     display: none;
   }
+
+  #main-content-wrapper {
+    margin-left: max(200px, 25vw)
+  }
+
   #overture-background {
     transform: translateX(max(200px, 25vw));
   }
