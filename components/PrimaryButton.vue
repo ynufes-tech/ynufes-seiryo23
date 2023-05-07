@@ -1,9 +1,33 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const props = withDefaults(defineProps<{
+  link: string
+  buttonText: string
+}>(), {
+  link: '',
+  sectionTitle: ''
+})
+</script>
 
 <template>
-  <div>
-    Component: PrimaryButton
-  </div>
+  <NuxtLink :to="props.link" class="primary-button">{{ props.buttonText }}</NuxtLink>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.primary-button {
+  display: block;
+  padding: 10px 40px;
+  width: fit-content;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  border: solid 1px #3b3b3b;
+  border-radius: 30px;
+  color: #3b3b3b;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #3b3b3b;
+    color: #fffdf5;
+  }
+}
+</style>
