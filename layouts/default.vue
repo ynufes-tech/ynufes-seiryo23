@@ -68,7 +68,7 @@
 }
 
 #left-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -80,6 +80,7 @@
   width: 100%;
   height: 100lvh;
   transition: all 0.3s ease-out;
+  z-index: -5;
 
   #overture-text {
     position: absolute;
