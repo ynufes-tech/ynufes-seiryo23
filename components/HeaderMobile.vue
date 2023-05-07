@@ -19,7 +19,7 @@
   width: 90vw;
   margin: 0 auto;
   opacity: 0.8;
-  background: #83fcd8;
+  background: #93EBF6;
   border-radius: 20px;
 }
 

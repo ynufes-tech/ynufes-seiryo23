@@ -4,10 +4,12 @@
   <div class="base-frame">
     <div class="page-content">
       <HeaderMobile id="header-mobile" />
-      <main id="main-content-wrapper" ><slot /></main>
+      <main id="main-content-wrapper">
+        <slot />
+      </main>
     </div>
     <div id="left-bar">
-      <div style="width: 300px; height: 100vh"></div>
+      <HeaderPC id="header-pc" />
       <div id="overture-background">
         <div id="overture-text">OVERTURE</div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1334.87 1440">
@@ -45,6 +47,11 @@
   overflow: hidden;
 }
 
+#header-pc {
+  z-index: 10;
+  display: none;
+}
+
 .page-content {
   position: relative;
   width: 100%;
@@ -76,15 +83,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100lvh;
   transition: all 0.3s ease-out;
+  z-index: -5;
 
   #overture-text {
     position: absolute;
     bottom: 0;
     left: 0;
     transform-origin: left bottom;
-    transform: rotate(270deg) translateY(80%);
+    transform: rotate(270deg) translateY(95%);
     font-size: min(10vh, 40vw);
     text-align: center;
     width: 100vh;
@@ -96,6 +104,7 @@
   > svg {
     opacity: 0.5;
     z-index: -1;
+    left: 0;
     position: absolute;
     height: 100vh;
     width: fit-content;
@@ -105,14 +114,6 @@
       fill: url(#linear-gradient);
     }
   }
-}
-</style>
-
-<style lang="scss">
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #594E4E;
-  background: #fffdf5;
 }
 
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
@@ -127,5 +128,17 @@ body {
   #overture-background {
     transform: translateX(max(200px, 25vw));
   }
+
+  #header-pc {
+    display: block;
+  }
+}
+</style>
+
+<style lang="scss">
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #594E4E;
+  background: #fffdf5;
 }
 </style>
