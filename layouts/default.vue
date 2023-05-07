@@ -109,12 +109,6 @@
     }
   }
 }
-</style>
-
-<style lang="scss">
-body {
-  background: #fffdf5;
-}
 
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
   #header-mobile {
@@ -128,5 +122,15 @@ body {
   #overture-background {
     transform: translateX(max(200px, 25vw));
   }
+
+  #header-pc {
+    display: block;
+  }
+}
+</style>
+
+<style lang="scss">
+body {
+  background: #fffdf5;
 }
 </style>
