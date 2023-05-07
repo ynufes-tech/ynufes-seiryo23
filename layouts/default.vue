@@ -6,21 +6,38 @@
       <slot />
       <HeaderMobile id="header-mobile" />
     </div>
-    <div id="base-background">
-      <div id="overture-text">OVERTURE</div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <defs>
-          <linearGradient id="myGradient" gradientTransform="rotate(0)">
-            <stop offset="0%" stop-color="rgba(237,150,192,0.5)" />
-            <stop offset="7%" stop-color="rgba(237,150,192,1)" />
-            <stop offset="53%" stop-color="rgba(176,203,255,1)" />
-            <stop offset="100%" stop-color="rgba(147,235,246,0.3)" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M0,64L60,85.3C120,107,240,149,360,165.3C480,181,600,171,720,154.7C840,139,960,117,1080,106.7C1200,96,1320,96,1380,96L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-        ></path>
-      </svg>
+    <div id="left-bar">
+      <div style="width: 300px; height: 100vh"></div>
+      <div id="overture-background">
+        <div id="overture-text">OVERTURE</div>
+        <svg
+          id="Layer_2"
+          data-name="Layer 2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1334.87 1440"
+        >
+          <defs>
+            <linearGradient
+              id="linear-gradient"
+              x1="135.29"
+              y1="1903.86"
+              x2="1575.29"
+              y2="1903.86"
+              gradientTransform="translate(2571.29 1575.29) rotate(-90) scale(1 -1)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#ed96c0" stop-opacity=".62" />
+              <stop offset=".07" stop-color="#ed96c1" />
+              <stop offset=".53" stop-color="#b0cbff" />
+              <stop offset="1" stop-color="#93ebf6" stop-opacity=".5" />
+            </linearGradient>
+          </defs>
+          <path
+            class="cls-1"
+            d="m1225.7,1440l21.3-60c21.7-60,63.7-180,80-300,15.7-120,5.7-240-10.6-360-15.7-120-37.7-240-48-360-10.7-120-10.7-240-10.7-300V0H0v1440h1225.7Z"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -47,12 +64,19 @@
   }
 }
 
-#base-background {
+#left-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#overture-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  transition: all 0.5s ease-in-out;
 
   #overture-text {
     position: absolute;
@@ -68,18 +92,15 @@
   }
 
   > svg {
-    opacity: 0.45;
+    opacity: 0.5;
     z-index: -1;
-    transform: rotate(270deg) translateY(100%);
-    transform-origin: left bottom;
-    width: 100vh;
-    object-fit: fill;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 100vh;
+    width: fit-content;
+    transform: translateX(calc(-100% + min(10vh, 40vw)));
 
-    > path {
-      fill: url(#myGradient);
+    path {
+      fill: url(#linear-gradient);
     }
   }
 }
@@ -90,5 +111,14 @@ body {
   background: #fffdf5;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
+  #header-mobile {
+    display: none;
+  }
+  #overture-background {
+    transform: translateX(max(200px, 25vw));
+  }
 }
 </style>
