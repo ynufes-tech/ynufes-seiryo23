@@ -4,6 +4,7 @@
   <div class="base-frame">
     <div class="page-content">
       <slot />
+      <HeaderMobile id="header-mobile" />
     </div>
     <div id="base-background">
       <div id="overture-text">OVERTURE</div>
@@ -37,6 +38,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  #header-mobile {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+  }
 }
 
 #base-background {
@@ -60,6 +68,7 @@
   }
 
   > svg {
+    opacity: 0.45;
     z-index: -1;
     transform: rotate(270deg) translateY(100%);
     transform-origin: left bottom;
@@ -68,7 +77,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: auto;
 
     > path {
       fill: url(#myGradient);
