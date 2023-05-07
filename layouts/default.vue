@@ -13,7 +13,7 @@
             <stop offset="0%" stop-color="rgba(237,150,192,0.5)" />
             <stop offset="7%" stop-color="rgba(237,150,192,1)" />
             <stop offset="53%" stop-color="rgba(176,203,255,1)" />
-            <stop offset="100%" stop-color="rgba(147,235,246,1)" />
+            <stop offset="100%" stop-color="rgba(147,235,246,0.3)" />
           </linearGradient>
         </defs>
         <path
