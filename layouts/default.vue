@@ -3,8 +3,8 @@
 <template>
   <div class="base-frame">
     <div class="page-content">
-      <slot />
       <HeaderMobile id="header-mobile" />
+      <main id="main-content-wrapper" ><slot /></main>
     </div>
     <div id="left-bar">
       <div style="width: 300px; height: 100vh"></div>
@@ -56,6 +56,12 @@
     top: 20px;
     left: 0;
     right: 0;
+  }
+
+  #main-content-wrapper {
+    margin-top: 130px;
+    position: relative;
+    z-index: 1;
   }
 }
 

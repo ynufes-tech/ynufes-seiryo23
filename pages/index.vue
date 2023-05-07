@@ -1,9 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
-    Page: foo
+  <DateCircle />
+  <div class="access">
+    <h2>アクセス</h2>
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
