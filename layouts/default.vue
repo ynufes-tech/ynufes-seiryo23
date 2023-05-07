@@ -43,7 +43,7 @@
 .base-frame {
   position: relative;
   width: 100lvw;
-  height: 100lvh;
+  min-height: 100lvh;
   overflow: hidden;
 }
 
@@ -137,6 +137,8 @@
 
 <style lang="scss">
 body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #594E4E;
   background: #fffdf5;
 }
 </style>
