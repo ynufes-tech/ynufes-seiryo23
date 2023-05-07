@@ -1,4 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: '清陵祭2023 公式HP トップ',
+  meta: [
+    {
+      name: 'description',
+      content: '5/20,21に開催される清陵祭2023の公式HPです。今年は3年ぶりの対面開催!!'
+    },
+  ]
+})
+</script>
 
 <template>
   <DateCircle />
@@ -15,7 +25,7 @@
 <style lang="scss" scoped>
 .access {
   width: calc(90vw - 130px);
-  margin: 100px auto 0px;
+  margin: 100px auto 0;
 
   .train-access {
     border: 1px solid #3b3b3b;
