@@ -110,6 +110,8 @@
 
 <style lang="scss">
 body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #594E4E;
   background: #fffdf5;
 }
 
