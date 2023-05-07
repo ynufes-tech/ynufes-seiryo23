@@ -3,8 +3,14 @@
 <template>
   <DateCircle />
   <div class="access">
-    <h2>アクセス</h2>
+    <SectionTitle section-title="アクセス"/>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.access {
+  width: 90vw;
+  margin: 100px auto 0px;
+
+}
+</style>
