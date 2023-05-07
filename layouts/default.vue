@@ -41,7 +41,7 @@
 .base-frame {
   position: relative;
   width: 100lvw;
-  height: 100lvh;
+  min-height: 100lvh;
   overflow: hidden;
 }
 
@@ -66,7 +66,7 @@
 }
 
 #left-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -110,6 +110,8 @@
 
 <style lang="scss">
 body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #594E4E;
   background: #fffdf5;
 }
 
