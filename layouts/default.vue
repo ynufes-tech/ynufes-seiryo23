@@ -9,7 +9,7 @@
       </main>
     </div>
     <div id="left-bar">
-      <HeaderPC style="display: none"/>
+      <HeaderPC id="header-pc" />
       <div id="overture-background">
         <div id="overture-text">OVERTURE</div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1334.87 1440">
@@ -45,6 +45,11 @@
   width: 100lvw;
   height: 100lvh;
   overflow: hidden;
+}
+
+#header-pc {
+  z-index: 10;
+  display: none;
 }
 
 .page-content {
