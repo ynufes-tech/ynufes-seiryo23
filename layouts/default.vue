@@ -10,12 +10,7 @@
       <div style="width: 300px; height: 100vh"></div>
       <div id="overture-background">
         <div id="overture-text">OVERTURE</div>
-        <svg
-          id="Layer_2"
-          data-name="Layer 2"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1334.87 1440"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1334.87 1440">
           <defs>
             <linearGradient
               id="linear-gradient"
@@ -88,6 +83,7 @@
     text-align: center;
     width: 100vh;
     color: #fffdf5;
+    user-select: none;
     font-family: "Konkhmer Sleokchher", cursive;
   }
 
