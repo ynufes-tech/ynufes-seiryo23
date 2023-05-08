@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "清陵祭2023 - 横浜国立大学大学祭" },
         // { property: "og:image", content: "<ogpに使われる画像の絶対パス>" }
-        { property: "keywords", content: "清陵祭,横浜国立大学,大学祭,文化祭,清涼祭" },
+        { property: "keywords", content: "清陵祭,横浜国立大学,大学祭,文化祭,清涼祭" }
       ]
     }
 
