@@ -59,7 +59,7 @@
 }
 
 #main-content-wrapper {
-  padding-top: 150px;
+  padding: 150px 0;
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -90,7 +90,7 @@
     font-size: min(10vh, 40vw);
     text-align: center;
     width: 100vh;
-    color: #fffdf5;
+    color: #f6f4f0;
     user-select: none;
     font-family: "Konkhmer Sleokchher", cursive;
   }
