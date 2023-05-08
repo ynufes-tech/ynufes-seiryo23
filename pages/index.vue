@@ -52,7 +52,7 @@ useHead({
     border-radius: 12px;
     padding: 20px;
     margin: 0 auto;
-    max-width: 95vw;
+    max-width: 90vw;
     width: fit-content;
     text-align: left;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ useHead({
   #access-map {
     margin-top: 20px;
     border-radius: 12px;
-    max-width: 95vw;
+    max-width: 90vw;
     aspect-ratio: 1;
   }
 }
