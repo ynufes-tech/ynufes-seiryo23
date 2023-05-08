@@ -17,7 +17,7 @@ header {
     margin: 0 auto;
     padding: 20px 0;
     width: 100%;
-    color: #594E4E;
+    color: #594e4e;
     box-sizing: border-box;
     border-bottom: 1px solid #3b3b3b;
 
@@ -37,6 +37,6 @@ header {
   }
 
   width: max(200px, 25vw);
-  height: 100vh;
+  height: 100lvh;
 }
 </style>
