@@ -122,7 +122,7 @@
   }
 
   #main-content-wrapper {
-    margin-left: max(200px, 25vw)
+    margin-left: max(200px, 25vw);
   }
 
   #overture-background {
@@ -137,8 +137,8 @@
 
 <style lang="scss">
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #594E4E;
-  background: #fffdf5;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #594e4e;
+  background: #f6f4f0;
 }
 </style>

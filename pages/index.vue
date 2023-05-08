@@ -4,14 +4,16 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "5/20,21に開催される清陵祭2023の公式HPです。今年は3年ぶりの対面開催!!"
-    }
-  ]
+      content:
+        "5/20,21に開催される清陵祭2023の公式HPです。今年は3年ぶりの対面開催!!",
+    },
+  ],
 });
 </script>
 
 <template>
   <DateCircle />
+  <SponsorsView />
   <div class="access">
     <SectionTitle class="access-title" section-title="アクセス" />
     <div class="train-access">
@@ -22,8 +24,13 @@ useHead({
     <iframe
       id="access-map"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3249.248346481359!2d139.5865167!3d35.4733988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2z5qiq5rWc5Zu956uL5aSn5a2m!5e0!3m2!1sja!2sjp!4v1683509810519!5m2!1sja!2sjp"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </template>
 
