@@ -59,7 +59,7 @@
 }
 
 #main-content-wrapper {
-  padding-top: 150px;
+  padding: 150px 0;
   position: relative;
   height: 100%;
   overflow: hidden;
