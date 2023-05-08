@@ -2,12 +2,10 @@
 
 <template>
   <div class="base-frame">
-    <div class="page-content">
-      <HeaderMobile id="header-mobile" />
-      <main id="main-content-wrapper">
-        <slot />
-      </main>
-    </div>
+    <HeaderMobile id="header-mobile" />
+    <main id="main-content-wrapper">
+      <slot />
+    </main>
     <div id="left-bar">
       <HeaderPC id="header-pc" />
       <div id="overture-background">
@@ -42,7 +40,7 @@
 <style scoped lang="scss">
 .base-frame {
   position: relative;
-  width: 100lvw;
+  width: 100%;
   min-height: 100lvh;
   overflow: hidden;
 }
@@ -52,30 +50,26 @@
   display: none;
 }
 
-.page-content {
+#header-mobile {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#main-content-wrapper {
+  padding-top: 150px;
   position: relative;
-  width: 100%;
   height: 100%;
   overflow: hidden;
-
-  #header-mobile {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-  }
-
-  #main-content-wrapper {
-    margin-top: 130px;
-    position: relative;
-    z-index: 1;
-  }
 }
 
 #left-bar {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -10;
 }
 
 #overture-background {
