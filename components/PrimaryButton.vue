@@ -1,15 +1,20 @@
 <script lang="ts" setup>
-const props = withDefaults(defineProps<{
-  link: string
-  buttonText: string
-}>(), {
-  link: '',
-  sectionTitle: ''
-})
+const props = withDefaults(
+  defineProps<{
+    link: string;
+    buttonText: string;
+  }>(),
+  {
+    link: "/",
+    buttonText: "Click Me",
+  }
+);
 </script>
 
 <template>
-  <NuxtLink :to="props.link" class="primary-button">{{ props.buttonText }}</NuxtLink>
+  <NuxtLink :to="props.link" class="primary-button" ontouchstart="">{{
+    props.buttonText
+  }}</NuxtLink>
 </template>
 
 <style scoped lang="scss">
@@ -25,9 +30,17 @@ const props = withDefaults(defineProps<{
   color: #3b3b3b;
   transition: all 0.2s;
 
-  &:hover {
-    background-color: #3b3b3b;
-    color: #fffdf5;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #3b3b3b;
+      color: #fffdf5;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      background-color: #3b3b3b;
+      color: #fffdf5;
+    }
   }
 }
 </style>
