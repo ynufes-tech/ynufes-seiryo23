@@ -21,7 +21,7 @@ export default {
   margin: 30px auto;
   flex-direction: row;
   align-items: center;
-  max-width: 90%;
+  max-width: min(90%, 600px);
   overflow: hidden;
   box-sizing: border-box;
   border-radius: 10px;
