@@ -1,9 +1,17 @@
 <template>
   <div class="sponsor-frame">
-    <a href="http://www.hazawa-kubotaganka.com/">
+    <a
+      href="https://www.sotetsu-joinus.com/"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
       <img src="@/assets/images/JOINUS.jpg" />
     </a>
-    <a href="https://www.sotetsu-joinus.com/">
+    <a
+      href="https://www.hazawa-kubotaganka.com/"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
       <img src="@/assets/images/KUBOTA.png" />
     </a>
   </div>
