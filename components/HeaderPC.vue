@@ -6,13 +6,39 @@
       <h1>清陵祭2023</h1>
       <h2>横浜国立大学 大学祭</h2>
     </div>
+    <menu>
+      <ul>
+        <li>
+          <NuxtLink to="/">Home</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/about">清陵祭について</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/events">企画検索</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/schedule">スケジュール</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/pamphlet">パンフレット</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/sponsors">ご協賛について</NuxtLink>
+        </li>
+      </ul>
+    </menu>
   </header>
 </template>
 
 <style scoped lang="scss">
 header {
+  display: flex;
+  flex-direction: column;
+  width: max(200px, 25vw);
+  height: 100lvh;
+
   > #seiryo-logo {
-    z-index: 10;
     text-align: center;
     margin: 0 auto;
     padding: 20px 0;
@@ -36,7 +62,29 @@ header {
     }
   }
 
-  width: max(200px, 25vw);
-  height: 100lvh;
+  menu {
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0 10% 0 0;
+
+    > ul {
+      margin: 0;
+      box-sizing: border-box;
+      width: 100%;
+      padding-top: 10%;
+      height: min(80%, 450px);
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+
+      a {
+        font-size: 1.3em;
+        text-decoration: none;
+        color: #594e4e;
+      }
+    }
+  }
 }
 </style>

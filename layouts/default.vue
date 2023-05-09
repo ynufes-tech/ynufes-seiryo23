@@ -118,7 +118,7 @@
   }
 
   #header-pc {
-    display: block;
+    display: flex;
   }
 }
 </style>
