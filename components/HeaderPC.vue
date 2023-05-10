@@ -72,7 +72,7 @@ header {
       box-sizing: border-box;
       width: 100%;
       padding-top: 10%;
-      height: min(80%, 450px);
+      height: min(95%, 450px);
       list-style: none;
       display: flex;
       flex-direction: column;

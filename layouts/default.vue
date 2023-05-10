@@ -120,6 +120,10 @@
   #header-pc {
     display: flex;
   }
+
+  #main-content-wrapper {
+    padding: 50px 0;
+  }
 }
 </style>
 
