@@ -1,4 +1,16 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const imageList = [
+  "/images/22-seiryo-images/about1.webp",
+  "/images/22-seiryo-images/about2.webp",
+  "/images/22-seiryo-images/about3.webp",
+  "/images/22-seiryo-images/about4.webp",
+  "/images/22-seiryo-images/about5.webp",
+  "/images/22-seiryo-images/about6.webp",
+  "/images/22-seiryo-images/about7.webp",
+  "/images/22-seiryo-images/about8.webp",
+  "/images/22-seiryo-images/about9.webp",
+];
+</script>
 
 <template>
   <SectionTitle class="about-title" section-title="清陵祭とは" />
@@ -21,10 +33,12 @@
       昨年度の大学祭と異なり事前予約も人数制限もございませんので、ぜひお気軽にお越しください。
     </p>
   </div>
+  <SectionTitle class="about-seiryo-22" section-title="過去の清陵祭" />
+  <TheCarousel :imageList="imageList" />
 </template>
 
 <style scoped lang="scss">
-.about-title {
+.about-title, .about-seiryo-22 {
   margin: 0 auto;
   width: fit-content;
 }
