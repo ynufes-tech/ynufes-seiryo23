@@ -2,7 +2,8 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import "swiper/css/navigation";
+import { Pagination, Autoplay, Navigation } from "swiper";
 
 interface Props {
   imageList?: string[];
@@ -15,12 +16,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <swiper
-    :modules="[Pagination, Autoplay]"
+    :modules="[Pagination, Autoplay, Navigation]"
     :pagination="{ clickable: true }"
     :autoplay="false"
-    slides-per-view="auto"
     :loop="true"
+    :space-between="10"
     :centered-slides="true"
+    :navigation="true"
   >
     <swiper-slide v-for="image in imageList" :key="image"
       ><img :src="image" class="swiper-image"
@@ -29,25 +31,28 @@ const props = withDefaults(defineProps<Props>(), {
 </template>
 
 <style lang="scss" scoped>
-.swiper-slide {
-  display: flex;
-  justify-content: center;
+.swiper {
   width: 90%;
-  max-width: 900px;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
 
-  .swiper-image {
-    border-radius: 30px;
-    width: 100%;
+    .swiper-image {
+      border-radius: 30px;
+      width: 100%;
+    }
   }
 }
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
   .swiper {
-    width: 100%;
-    
+    width: 80%;
+
     .swiper-slide {
       display: flex;
       justify-content: center;
-      width: 100%;
+      min-width: 100%;
       box-sizing: border-box;
       padding: 10px;
 
