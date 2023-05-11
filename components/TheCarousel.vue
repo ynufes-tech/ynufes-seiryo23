@@ -17,10 +17,9 @@ const props = withDefaults(defineProps<Props>(), {
   <swiper
     :modules="[Pagination, Autoplay]"
     :pagination="{ clickable: true }"
-    :autoplay="true"
+    :autoplay="false"
     slides-per-view="auto"
     :loop="true"
-    :space-between="10"
     :centered-slides="true"
   >
     <swiper-slide v-for="image in imageList" :key="image"
@@ -42,16 +41,20 @@ const props = withDefaults(defineProps<Props>(), {
   }
 }
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
+  .swiper {
     width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-
-    .swiper-image {
-      border-radius: 30px;
+    
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
       width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+
+      .swiper-image {
+        border-radius: 30px;
+        width: 100%;
+      }
     }
   }
 }
