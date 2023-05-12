@@ -38,10 +38,12 @@ const imageList = [
 </template>
 
 <style scoped lang="scss">
-.about-title, .about-seiryo-22 {
+.about-title,
+.about-seiryo-22 {
   margin: 0 auto;
   width: fit-content;
 }
+
 .about-description-wrapper {
   max-width: min(40em, 90%);
   box-sizing: border-box;
@@ -59,6 +61,7 @@ const imageList = [
     font-weight: bold;
     padding-right: 4px;
   }
+
   .overture-emphasis {
     font-family: "Konkhmer-Sleokchher", sans-serif;
     font-weight: bold;
@@ -67,10 +70,12 @@ const imageList = [
 
   .date-description {
     margin: 16px auto;
+
     .date-list {
       list-style: none;
       padding: 0;
       margin: 0;
+
       .date-list-item {
         font-size: 1.6rem;
         margin: 0;

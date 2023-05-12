@@ -83,7 +83,7 @@ header {
       margin: 0;
       box-sizing: border-box;
       width: 100%;
-      padding-top: 10%;
+      padding: 10% 0 0 0;
       height: min(95%, 450px);
       list-style: none;
       display: flex;
@@ -101,12 +101,13 @@ header {
         font-size: 1.3em;
         text-decoration: none;
         color: #594e4e;
+        opacity: 0.5;
       }
 
-      a.router-link-active,
-      .router-link-active > span {
-        font-size: 1.4em;
+      a.router-link-active {
+        font-size: 1.6em;
         font-weight: bold;
+        opacity: 1;
       }
     }
   }
