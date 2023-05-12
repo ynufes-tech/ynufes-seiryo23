@@ -9,7 +9,7 @@
     <menu>
       <ul>
         <li>
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/">ホーム</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/about">
