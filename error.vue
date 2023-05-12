@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   height: 100lvh;
-  padding: 0 !important;
+  padding: 0;
 }
 .content {
   margin: auto;

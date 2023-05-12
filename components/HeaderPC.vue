@@ -6,7 +6,7 @@
       <h1>清陵祭2023</h1>
       <h2>横浜国立大学 大学祭</h2>
     </div>
-    <menu>
+    <nav>
       <ul>
         <li>
           <NuxtLink to="/">ホーム</NuxtLink>
@@ -33,7 +33,7 @@
           </NuxtLink>
         </li>
       </ul>
-    </menu>
+    </nav>
   </header>
 </template>
 
