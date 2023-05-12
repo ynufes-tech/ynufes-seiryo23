@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<{
   .tone-4 {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -10px;
     font-size: 24px;
     font-weight: bold;
     animation: tone 2s infinite;

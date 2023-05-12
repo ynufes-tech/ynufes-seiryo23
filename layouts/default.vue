@@ -6,33 +6,31 @@
     <main id="main-content-wrapper">
       <slot />
     </main>
-    <div id="left-bar">
-      <HeaderPC id="header-pc" />
-      <div id="overture-background">
-        <div id="overture-text">OVERTURE</div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1334.87 1440">
-          <defs>
-            <linearGradient
-              id="linear-gradient"
-              x1="135.29"
-              y1="1903.86"
-              x2="1575.29"
-              y2="1903.86"
-              gradientTransform="translate(2571.29 1575.29) rotate(-90) scale(1 -1)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stop-color="#ed96c0" stop-opacity=".62" />
-              <stop offset=".07" stop-color="#ed96c1" />
-              <stop offset=".53" stop-color="#b0cbff" />
-              <stop offset="1" stop-color="#93ebf6" stop-opacity=".5" />
-            </linearGradient>
-          </defs>
-          <path
-            class="cls-1"
-            d="m1225.7,1440l21.3-60c21.7-60,63.7-180,80-300,15.7-120,5.7-240-10.6-360-15.7-120-37.7-240-48-360-10.7-120-10.7-240-10.7-300V0H0v1440h1225.7Z"
-          />
-        </svg>
-      </div>
+    <HeaderPC id="header-pc" />
+    <div id="overture-background">
+      <div id="overture-text">OVERTURE</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1334.87 1440">
+        <defs>
+          <linearGradient
+            id="linear-gradient"
+            x1="135.29"
+            y1="1903.86"
+            x2="1575.29"
+            y2="1903.86"
+            gradientTransform="translate(2571.29 1575.29) rotate(-90) scale(1 -1)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#ed96c0" stop-opacity=".62" />
+            <stop offset=".07" stop-color="#ed96c1" />
+            <stop offset=".53" stop-color="#b0cbff" />
+            <stop offset="1" stop-color="#93ebf6" stop-opacity=".5" />
+          </linearGradient>
+        </defs>
+        <path
+          class="cls-1"
+          d="m1225.7,1440l21.3-60c21.7-60,63.7-180,80-300,15.7-120,5.7-240-10.6-360-15.7-120-37.7-240-48-360-10.7-120-10.7-240-10.7-300V0H0v1440h1225.7Z"
+        />
+      </svg>
     </div>
   </div>
 </template>
@@ -46,6 +44,9 @@
 }
 
 #header-pc {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
   display: none;
 }
@@ -65,15 +66,8 @@
   overflow: hidden;
 }
 
-#left-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
-}
-
 #overture-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -124,7 +118,11 @@
   }
 
   #header-pc {
-    display: block;
+    display: flex;
+  }
+
+  #main-content-wrapper {
+    padding: 50px 0;
   }
 }
 </style>
