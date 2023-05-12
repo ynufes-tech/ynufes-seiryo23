@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
   <swiper
     :modules="[Pagination, Autoplay, Navigation]"
     :pagination="{ clickable: true }"
-    :autoplay="false"
+    :autoplay="true"
     :loop="true"
     :space-between="10"
     :centered-slides="true"
