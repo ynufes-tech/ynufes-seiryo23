@@ -12,7 +12,10 @@
           <NuxtLink to="/">Home</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about">清陵祭について</NuxtLink>
+          <NuxtLink to="/about">
+            <span>清陵祭に</span>
+            <span>ついて</span>
+          </NuxtLink>
         </li>
         <li>
           <NuxtLink to="/events">企画検索</NuxtLink>
@@ -24,7 +27,10 @@
           <NuxtLink to="/pamphlet">パンフレット</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/sponsors">ご協賛について</NuxtLink>
+          <NuxtLink to="/sponsors">
+            <span>ご協賛に</span>
+            <span>ついて</span>
+          </NuxtLink>
         </li>
       </ul>
     </menu>
@@ -37,6 +43,11 @@ header {
   flex-direction: column;
   width: max(200px, 25vw);
   height: 100lvh;
+
+  span {
+    display: inline-block;
+    text-align: right;
+  }
 
   > #seiryo-logo {
     text-align: center;
@@ -65,6 +76,7 @@ header {
   menu {
     flex-grow: 1;
     margin: 0 auto;
+    width: min(100%, 15em);
     padding: 0 10% 0 0;
 
     > ul {
@@ -79,10 +91,22 @@ header {
       justify-content: space-around;
       align-items: flex-end;
 
+      li {
+        transition: all 0.5s linear;
+        width: 100%;
+        text-align: right;
+      }
+
       a {
         font-size: 1.3em;
         text-decoration: none;
         color: #594e4e;
+      }
+
+      a.router-link-active,
+      .router-link-active > span {
+        font-size: 1.4em;
+        font-weight: bold;
       }
     }
   }
