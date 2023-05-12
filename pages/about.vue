@@ -43,9 +43,8 @@ const imageList = [
   width: fit-content;
 }
 .about-description-wrapper {
-  max-width: 90%;
+  max-width: min(40em, 90%);
   box-sizing: border-box;
-  padding: 8px 24px;
   margin: 0 auto;
   width: 90vw;
 
