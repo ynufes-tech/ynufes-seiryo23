@@ -7,10 +7,10 @@ export default defineNuxtConfig({
       {
         families: {
           "Konkhmer Sleokchher": {
-            wght: [400, 500, 600, 700],
+            wght: true,
           },
           "Noto Sans JP": {
-            wght: [400, 500, 600, 700],
+            wght: true,
           },
         },
         download: true,
