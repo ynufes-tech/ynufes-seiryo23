@@ -1,3 +1,15 @@
+<script setup lang="ts">
+useHead({
+  title: "清陵祭 - お探しのページは見つかりませんでした",
+  meta: [
+    {
+      name: "description",
+      content: "申し訳ありませんが、お探しのページは見つかりませんでした。",
+    },
+  ],
+});
+</script>
+
 <template>
   <NuxtLayout id="layout-frame">
     <div class="content">

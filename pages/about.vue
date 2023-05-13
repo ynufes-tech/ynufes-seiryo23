@@ -10,6 +10,17 @@ const imageList = [
   "/images/22-seiryo-images/about8.webp",
   "/images/22-seiryo-images/about9.webp",
 ];
+useHead({
+  title: "清陵祭 - 清陵祭について",
+  meta: [
+    {
+      name: "description",
+      content:
+        "清陵祭は横浜国立大学の春の学園祭で、今年度のテーマは'Overture'。新入生の大学生活の始まりを飾る楽しいイベントを提供します。5月20" +
+        "日と21日に開催され、事前予約や人数制限はありません。過去の清陵祭の写真もご覧いただけます。ぜひお越しください。",
+    },
+  ],
+});
 </script>
 
 <template>
