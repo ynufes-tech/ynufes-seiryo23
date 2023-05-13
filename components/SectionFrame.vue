@@ -1,18 +1,9 @@
-<script lang="ts" setup>
-const props = withDefaults(
-  defineProps<{
-    sectionTitle: string;
-  }>(),
-  {
-    sectionTitle: "Empty Section Title",
-  }
-);
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="frame-section">
     <div>
-      <div v-html="props.sectionTitle" />
+      <slot />
     </div>
   </div>
 </template>
@@ -26,12 +17,11 @@ const props = withDefaults(
   border-radius: 16px;
 
   > div {
-    display: flex;
     border-radius: 15px;
     background-color: #fcfcfc;
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    padding: 1.5em;
 
     > div {
       display: inline-block;
