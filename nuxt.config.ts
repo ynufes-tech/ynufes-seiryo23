@@ -6,14 +6,9 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          "Konkhmer Sleokchher": {
-            wght: true,
-          },
-          "Noto Sans JP": {
-            wght: true,
-          },
+          "Konkhmer Sleokchher": true,
+          "Noto Sans JP": true,
         },
-        download: true,
       },
     ],
   ],
