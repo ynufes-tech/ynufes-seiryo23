@@ -50,6 +50,7 @@ sponsors.push(...sponsors);
 .swiper {
   margin: 30px auto;
   width: min(90vw, 400px);
+  aspect-ratio: 4.5;
 }
 
 .swiper-slide {
