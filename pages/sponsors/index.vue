@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "清陵祭 - ご協賛について",
+  meta: [
+    {
+      name: "description",
+      content:
+        "清陵祭は、多くの企業や団体からのご協賛により実現しています。広告協賛、寄付、ブース協賛、物品協賛と様々な形でのご支援をいただいております。ご協賛いただいた皆様に深く感謝申し上げます。",
+    },
+  ],
+});
+</script>
 
 <template>
   <div id="sponsors-page-frame">
@@ -8,6 +19,7 @@
       <br />
       &emsp;ご協賛いただきました企業を以下に掲載させていただきます。
     </SectionFrame>
+    <LazySponsorsView />
     <div>
       <hr />
       <section class="sponsor-section">
