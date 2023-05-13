@@ -57,6 +57,7 @@
           <li>横浜モアーズ</li>
         </ul>
       </section>
+      <hr />
       <section class="sponsor-section">
         <h2>寄付</h2>
         <ul>
@@ -65,6 +66,7 @@
           <li>富丘会</li>
         </ul>
       </section>
+      <hr />
       <section class="sponsor-section">
         <h2>ブース協賛</h2>
         <ul>
@@ -80,6 +82,7 @@
           <li>保土ヶ谷区福祉健康課</li>
         </ul>
       </section>
+      <hr />
       <section class="sponsor-section">
         <h2>物品協賛</h2>
         <ul>
@@ -160,6 +163,15 @@
   padding: 0 1rem;
   text-align: center;
   font-size: 1.2em;
+
+  hr {
+    display: block;
+    border: none;
+    background: linear-gradient(45deg, #ecb2c6, #8dc0f5);
+    height: 0.1em;
+    border-radius: 0.1em;
+    width: 70%;
+  }
 
   #sponsors-page-frame-section {
     text-align: start;
