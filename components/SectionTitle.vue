@@ -33,6 +33,7 @@ const props = withDefaults(
   .tone-2,
   .tone-3,
   .tone-4 {
+    z-index: -1;
     position: absolute;
     opacity: 0;
     top: 0;
