@@ -1,0 +1,194 @@
+<script setup lang="ts"></script>
+
+<template>
+  <div id="sponsors-page-frame">
+    <SectionTitle section-title="ご協賛について" />
+    <div class="sponsor-sections">
+      <section class="sponsor-section">
+        <h2>広告協賛</h2>
+        <ul>
+          <li>JOINUS</li>
+          <li>Mare Profond</li>
+          <li>オーサムデンタルクリニック</li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>安藤スポーツ</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>カレッジヤード</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>ジェイ・ブロード</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>ソフィアアカデミー</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>デスポ</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>ネオ倶楽部</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>ロフトシステムズ</span>
+          </li>
+          <li>鴨居自動車学校</li>
+          <li>珈琲の店MA</li>
+          <li>小林内科・循環器クリニック</li>
+          <li><span>埼玉南センコーロジ&nbsp;</span><span>株式会社</span></li>
+          <li><span>サンデーペイント&nbsp;</span>株式会社</li>
+          <li>鶴ヶ峰自動車学校</li>
+          <li>寺田倉庫&nbsp;株式会社</li>
+          <li>ネクストギアーズ&nbsp;株式会社</li>
+          <li>羽沢くぼた眼科</li>
+          <li>マセマ出版社</li>
+          <li>横浜保土ケ谷中央病院</li>
+          <li>横浜モアーズ</li>
+        </ul>
+      </section>
+      <section class="sponsor-section">
+        <h2>寄付</h2>
+        <ul>
+          <li>有限会社&nbsp;現代不動産</li>
+          <li>横浜銀行和田町支店</li>
+          <li>富丘会</li>
+        </ul>
+      </section>
+      <section class="sponsor-section">
+        <h2>ブース協賛</h2>
+        <ul>
+          <li>
+            <span>医療法人社団&nbsp;伊純会&nbsp;</span>
+            <span>介護老人福祉施設スカイ</span>
+          </li>
+          <li>株式会社&nbsp;アットヨコハマ</li>
+          <li>
+            <span>株式会社&nbsp;ミニミニ神奈川&nbsp;</span>
+            <span>横浜西口店</span>
+          </li>
+          <li>保土ヶ谷区福祉健康課</li>
+        </ul>
+      </section>
+      <section class="sponsor-section">
+        <h2>物品協賛</h2>
+        <ul>
+          <li>
+            <span>UNI COFFEE ROASTERY</span>
+            <span>(株式会社&nbsp;GRACE)</span>
+          </li>
+          <li>UTAWA</li>
+          <li>ZIGEN株式会社</li>
+          <li>相田みつを美術館</li>
+          <li>アルペンローゼ&nbsp;株式会社</li>
+          <li>
+            <span>一般社団法人&nbsp;</span>
+            <span>そごう美術館</span>
+          </li>
+          <li>馬の博物館</li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>RQ芦ノ湖リゾートHOTEL&nbsp;Rakuun</span>
+          </li>
+          <li><span>株式会社&nbsp;</span><span>伊豆シャボテン公園</span></li>
+          <li><span>株式会社&nbsp;</span><span>伊豆バイオパーク</span></li>
+          <li>
+            <span>株式会社&nbsp;温泉道場&nbsp;</span
+            ><span>おふろcafé utatane</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>真誠</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>タスカジ</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>鉄人化計画</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>デルインターナショナル</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>新潟味のれん本舗</span>
+          </li>
+          <li>
+            <span>株式会社&nbsp;</span>
+            <span>フォレストアドベンチャー</span>
+          </li>
+          <li>鎌倉まめや</li>
+          <li>鴨居自動車学校</li>
+          <li>玉露園食品&nbsp;株式会社</li>
+          <li>公益社団法人&nbsp;戸栗美術館</li>
+          <li>さとの雪食品株式会社</li>
+          <li><span>サンデーペイント&nbsp;</span><span>株式会社</span></li>
+          <li><span>シャボン玉石けん&nbsp;</span><span>株式会社</span></li>
+          <li>酔鯨酒造&nbsp;株式会社</li>
+          <li>セメダイン&nbsp;株式会社</li>
+          <li>東京国立近代美術館</li>
+          <li>那須どうぶつ王国</li>
+          <li><span>ニュースパーク</span><span>（日本新聞博物館）</span></li>
+          <li>郵政博物館</li>
+          <li>横浜にぎわい座</li>
+          <li>横浜ロイヤルパーク</li>
+          <li>横浜市歴史博物館</li>
+          <li>ロマンスカーミュージアム</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+#sponsors-page-frame {
+  width: min(80%, 80vw, 900px);
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.2em;
+
+  .tone-wrapper {
+    margin: 50px auto;
+  }
+
+  span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .sponsor-section {
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    h2 {
+      font-size: 1.5em;
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      box-sizing: border-box;
+      padding: 0;
+      list-style: none;
+      gap: 0.8em;
+
+      li {
+        justify-content: center;
+        width: min(100%, 15em, fit-content);
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+</style>
