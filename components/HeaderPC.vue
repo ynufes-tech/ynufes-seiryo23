@@ -73,7 +73,7 @@ header {
     }
   }
 
-  menu {
+  nav {
     flex-grow: 1;
     margin: 0 auto;
     width: min(100%, 15em);
