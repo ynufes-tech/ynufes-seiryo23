@@ -34,6 +34,7 @@ const props = withDefaults(
   .tone-3,
   .tone-4 {
     position: absolute;
+    opacity: 0;
     top: 0;
     right: -10px;
     font-size: 24px;
