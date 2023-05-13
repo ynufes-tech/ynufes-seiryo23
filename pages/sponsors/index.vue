@@ -3,6 +3,11 @@
 <template>
   <div id="sponsors-page-frame">
     <SectionTitle section-title="ご協賛について" />
+    <FrameSection
+      id="sponsors-page-frame-section"
+      section-title="&emsp;「23清陵祭」を開催するにあたり、多くの企業の皆様より多大なご協力を賜りました。この場をお借りいたしまして、心より感謝申し上げます。
+      <br>&emsp;ご協賛いただきました企業を以下に掲載させていただきます。"
+    />
     <div class="sponsor-sections">
       <section class="sponsor-section">
         <h2>広告協賛</h2>
@@ -156,6 +161,10 @@
   text-align: center;
   font-size: 1.2em;
 
+  #sponsors-page-frame-section {
+    text-align: start;
+  }
+
   .tone-wrapper {
     margin: 50px auto;
   }
@@ -166,8 +175,7 @@
   }
 
   .sponsor-section {
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 4em;
 
     h2 {
       font-size: 1.5em;
