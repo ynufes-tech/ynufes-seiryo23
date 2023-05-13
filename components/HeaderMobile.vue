@@ -1,13 +1,8 @@
 <script lang="ts" setup>
 let isOpen = ref(false);
-onMounted(() => {
-  const hamburger = document.getElementById("hamburger-menu");
-  if (hamburger) {
-    hamburger.addEventListener("click", () => {
-      isOpen.value = !isOpen.value;
-    });
-  }
-});
+const toggleHamburger = () => {
+  isOpen.value = !isOpen.value;
+};
 const close = () => {
   isOpen.value = false;
 };
@@ -20,7 +15,7 @@ const close = () => {
         <h1>清陵祭2023</h1>
         <h2>横浜国立大学 大学祭</h2>
       </div>
-      <div id="hamburger-menu">
+      <div id="hamburger-menu" @click="toggleHamburger">
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
@@ -62,12 +57,15 @@ const close = () => {
   width: 90vw;
   height: 90px;
   margin: 0 auto;
-  opacity: 0.8;
-  background: #93ebf6;
+  background-color: #F6F4F0;
+  opacity: 1;
+  outline: 1px solid #060707;
+  outline-offset: -1px;
   border-radius: 20px;
 }
 
 .header-base__title {
+  z-index: 10;
   width: 90%;
   padding-left: 30px;
   height: 90px;
@@ -120,16 +118,24 @@ const close = () => {
   }
 }
 .mobile-navigation {
-  box-sizing: border-box;
-  background-color: #93ebf6;
+  
+  background-color: #F6F4F0;
+  opacity: 1;
+  border: 1px solid #060707;
+  border-top: none;
   position: relative;
   top: -16px;
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   ul {
     margin: 0;
     padding: 20px;
+
+    &:first-child {
+      padding-top: 40px;
+    }
   }
   li {
     list-style: none;
@@ -137,7 +143,7 @@ const close = () => {
     margin-bottom: 12px;
   }
   a {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     color: #594e4edd;
