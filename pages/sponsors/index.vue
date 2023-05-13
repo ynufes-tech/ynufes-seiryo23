@@ -176,6 +176,7 @@
 
   #sponsors-page-section-frame {
     text-align: start;
+    margin-bottom: 3em;
   }
 
   .tone-wrapper {
@@ -188,7 +189,8 @@
   }
 
   .sponsor-section {
-    margin-top: 4em;
+    margin-top: 1em;
+    margin-bottom: 4em;
 
     h2 {
       font-size: 1.5em;
