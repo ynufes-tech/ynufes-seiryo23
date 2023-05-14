@@ -18,7 +18,7 @@
 
 <style scoped lang="scss">
 .sorry-heading {
-  font-size: 20px
+  font-size: 20px;
 }
 .sorry-description {
   text-align: center;
