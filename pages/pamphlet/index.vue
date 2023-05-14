@@ -1,5 +1,6 @@
 <template>
   <SectionTitle section-title="パンフレット" class="section-title"/>
+  <UnderConstruction />
 </template>
 
 <script setup></script>
