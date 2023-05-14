@@ -12,6 +12,7 @@ useHead({
 </script>
 <template>
   <SectionTitle section-title="パンフレット" class="section-title" />
+  <UnderConstruction />
 </template>
 
 <style scoped lang="scss">
