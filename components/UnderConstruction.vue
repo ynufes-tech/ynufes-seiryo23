@@ -2,8 +2,8 @@
 
 <template>
   <div class="sorry-description">
-    <h1>このページは現在非公開となっております</h1>
-    <p>ページの公開まで今しばらくお待ちください。</p>
+    <h1 class="sorry-heading">このページは現在未公開となっております</h1>
+    <p>このページは現在作成中です。ページの公開まで今しばらくお待ちください。</p>
   </div>
   <div class="speech-bubble"><p class="momesen-comment">待ってもめ〜</p></div>
   <div class="kamome-senpai">
@@ -17,6 +17,9 @@
 </template>
 
 <style scoped lang="scss">
+.sorry-heading {
+  font-size: 20px
+}
 .sorry-description {
   text-align: center;
   margin: 0 auto;
