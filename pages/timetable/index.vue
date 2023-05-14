@@ -5,4 +5,8 @@
   <UnderConstruction />
 </template>
 
-<style scoped></style>
+<style scoped>
+.section-title {
+  margin: 0 auto;
+}
+</style>
