@@ -34,7 +34,7 @@
   box-sizing: border-box;
   z-index: 20;
   transform: translateX(50%);
-  animation: delay-popup 5s;
+  animation: delay-popup 1s;
 
   .momesen-comment {
     z-index: 100;
@@ -57,11 +57,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: momesen 4s;
+  animation: momesen 1s;
 }
 @keyframes momesen {
   from {
-    transform: translateX(50%);
+    transform: translateX(10%);
   }
   to {
     transform: translateX(0%);
