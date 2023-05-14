@@ -1,5 +1,5 @@
 <template>
-  <SectionTitle section-title="パンフレット" class="section-title"/>
+  <SectionTitle section-title="パンフレット" class="section-title" />
 </template>
 
 <script setup></script>
