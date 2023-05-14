@@ -16,8 +16,8 @@ useHead({
     {
       name: "description",
       content:
-        "清陵祭は横浜国立大学の春の学園祭で、今年度のテーマは'Overture'。新入生の大学生活の始まりを飾る楽しいイベントを提供します。5月20" +
-        "日と21日に開催され、事前予約や人数制限はありません。過去の清陵祭の写真もご覧いただけます。ぜひお越しください。",
+        "清陵祭は横浜国立大学の春の学園祭で、今年度のテーマは'Overture'。今年は3年ぶりの対面開催! 5月20" +
+        "日と21日に開催され、事前予約や人数制限はありません。本ページでは過去の清陵祭の様子も紹介しています。",
     },
   ],
 });
@@ -28,7 +28,7 @@ useHead({
   <div class="about-description-wrapper">
     <p class="about-description">
       <span class="first-letter">清</span
-      >陵祭は横浜国立大学の年2回の学園祭のうち、春に開催される学園祭です。23年度清陵際のテーマは<span
+      >陵祭は横浜国立大学の年2回の学園祭のうち、春に開催される学園祭です。23清陵祭のテーマは<span
         class="overture-emphasis"
         >Overture</span
       >。日本語で「序曲」や「前奏」といった意味の英単語です。新入生が入ってきて始めての大学祭、大学生活の始まりを彩るような楽しいイベントを目指しています。
@@ -37,7 +37,7 @@ useHead({
     <div class="date-description">
       <ul class="date-list">
         <li class="date-list-item">5月20日13時〜21時</li>
-        <li class="date-list-item">5月21日10時〜15時</li>
+        <li class="date-list-item">5月21日&ensp;9時〜15時</li>
       </ul>
     </div>
     <p class="about-description">
@@ -45,8 +45,16 @@ useHead({
     </p>
   </div>
   <SectionTitle class="about-seiryo-22" section-title="過去の清陵祭" />
-  <TheCarousel :imageList="imageList" />
-    <PrimaryButton button-text="ホームに戻る" style="margin-top: 40px;"/>
+  <div class="about-description-wrapper">
+    <p class="about-description">
+      <span class="first-letter">今</span
+      >年は3年ぶりの対面開催となります。2020年と2021年は開催中止となり、2022年はオンラインでの開催となりました。
+      2019年の清陵祭の様子をご覧ください。
+    </p>
+    <TheCarousel :imageList="imageList" />
+  </div>
+
+  <PrimaryButton button-text="ホームに戻る" style="margin-top: 40px" />
 </template>
 
 <style scoped lang="scss">
@@ -97,5 +105,9 @@ useHead({
       }
     }
   }
+}
+
+.the-carousel {
+  margin: 1em auto;
 }
 </style>

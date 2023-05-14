@@ -23,6 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
     :space-between="10"
     :centered-slides="true"
     :navigation="true"
+    class="the-carousel"
   >
     <swiper-slide v-for="image in imageList" :key="image"
       ><img :src="image" class="swiper-image"
