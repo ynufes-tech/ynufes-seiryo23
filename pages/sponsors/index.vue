@@ -167,6 +167,7 @@ useHead({
       </section>
     </div>
   </div>
+  <PrimaryButton button-text="ホームに戻る" />
 </template>
 
 <style scoped lang="scss">

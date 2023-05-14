@@ -46,7 +46,7 @@
   }
   .date-circle-date,
   .date-circle-time {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
     font-weight: bold;
     color: #fff;

@@ -46,6 +46,7 @@ useHead({
   </div>
   <SectionTitle class="about-seiryo-22" section-title="過去の清陵祭" />
   <TheCarousel :imageList="imageList" />
+    <PrimaryButton button-text="ホームに戻る" style="margin-top: 40px;"/>
 </template>
 
 <style scoped lang="scss">
