@@ -14,14 +14,20 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      htmlAttrs: {},
+      htmlAttrs: {
+        lang: "ja",
+        prefix: "og: https://ogp.me/ns#",
+      },
       meta: [
         { property: "og:type", content: "website" },
         {
           property: "og:site_name",
           content: "清陵祭2023 - 横浜国立大学大学祭",
         },
-        { property: "og:image", content: "/images/OGP_seiryo23.webp" },
+        {
+          property: "og:image",
+          content: "https://seiryo.ynu-fes.yokohama/images/OGP_seiryo23.webp",
+        },
         {
           property: "keywords",
           content:
