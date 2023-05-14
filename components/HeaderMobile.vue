@@ -23,7 +23,7 @@ const close = () => {
     </div>
     <Transition name="hamburger">
       <div v-if="isOpen">
-        <nav class="mobile-navigation" >
+        <nav class="mobile-navigation">
           <ul>
             <li>
               <NuxtLink to="/" @click="close">ホーム</NuxtLink>
@@ -41,7 +41,9 @@ const close = () => {
               <NuxtLink to="/pamphlet" @click="close">パンフレット</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/sponsors" @click="close"> ご協賛について </NuxtLink>
+              <NuxtLink to="/sponsors" @click="close">
+                ご協賛について
+              </NuxtLink>
             </li>
           </ul>
         </nav>
@@ -57,7 +59,7 @@ const close = () => {
   width: 90vw;
   height: 90px;
   margin: 0 auto;
-  background-color: #F6F4F0;
+  background-color: #f6f4f0;
   opacity: 1;
   outline: 1px solid #060707;
   outline-offset: -1px;
@@ -93,6 +95,7 @@ const close = () => {
       padding: 0;
     }
   }
+
   #hamburger-menu {
     width: 36px;
     margin-right: 10px;
@@ -108,18 +111,20 @@ const close = () => {
       &:first-child {
         width: 28px;
       }
+
       &:nth-child(2) {
         width: 16px;
       }
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
 }
+
 .mobile-navigation {
-  
-  background-color: #F6F4F0;
+  background-color: #f6f4f0;
   opacity: 1;
   border: 1px solid #060707;
   border-top: none;
@@ -129,6 +134,7 @@ const close = () => {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+
   ul {
     margin: 0;
     padding: 20px;
@@ -137,11 +143,13 @@ const close = () => {
       padding-top: 40px;
     }
   }
+
   li {
     list-style: none;
     text-align: center;
     margin-bottom: 12px;
   }
+
   a {
     font-size: 16px;
     font-weight: bold;
@@ -149,6 +157,7 @@ const close = () => {
     color: #594e4edd;
   }
 }
+
 .hamburger-enter-active,
 .hamburger-leave-active {
   transition: opacity 0.5s ease;

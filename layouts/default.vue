@@ -1,4 +1,16 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from "#imports";
+import { useHead, useRouter } from "#app";
+
+const router = useRouter();
+const currentPath = computed(
+  () => `https://seiryo.ynu-fes.yokohama${router.currentRoute.value.path}`
+);
+
+useHead({
+  meta: [{ property: "og:url", content: currentPath }],
+});
+</script>
 
 <template>
   <div class="base-frame">
