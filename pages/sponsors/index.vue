@@ -26,7 +26,7 @@ useHead({
         <h2>広告協賛</h2>
         <ul>
           <li>JOINUS</li>
-          <li>Mare Profond</li>
+          <li>Mare Profondo</li>
           <li>オーサムデンタルクリニック</li>
           <li>
             <span>株式会社&nbsp;</span>
@@ -85,14 +85,14 @@ useHead({
         <ul>
           <li>
             <span>医療法人社団&nbsp;伊純会&nbsp;</span>
-            <span>介護老人福祉施設スカイ</span>
+            <span>介護老人保健施設スカイ</span>
           </li>
           <li>株式会社&nbsp;アットヨコハマ</li>
           <li>
             <span>株式会社&nbsp;ミニミニ神奈川&nbsp;</span>
             <span>横浜西口店</span>
           </li>
-          <li>保土ヶ谷区福祉健康課</li>
+          <li>保土ヶ谷区福祉保健課</li>
         </ul>
       </section>
       <hr />
@@ -103,12 +103,12 @@ useHead({
             <span>UNI COFFEE ROASTERY</span>
             <span>(株式会社&nbsp;GRACE)</span>
           </li>
-          <li>UTAWA</li>
+          <li>UTOWA</li>
           <li>ZIGEN株式会社</li>
           <li>相田みつを美術館</li>
           <li>アルペンローゼ&nbsp;株式会社</li>
           <li>
-            <span>一般社団法人&nbsp;</span>
+            <span>一般財団法人&nbsp;</span>
             <span>そごう美術館</span>
           </li>
           <li>馬の博物館</li>
@@ -136,7 +136,7 @@ useHead({
           </li>
           <li>
             <span>株式会社&nbsp;</span>
-            <span>デルインターナショナル</span>
+            <span>デルタインターナショナル</span>
           </li>
           <li>
             <span>株式会社&nbsp;</span>
@@ -148,8 +148,8 @@ useHead({
           </li>
           <li>鎌倉まめや</li>
           <li>鴨居自動車学校</li>
-          <li>玉露園食品&nbsp;株式会社</li>
-          <li>公益社団法人&nbsp;戸栗美術館</li>
+          <li>玉露園食品工業&nbsp;株式会社</li>
+          <li>公益財団法人&nbsp;戸栗美術館</li>
           <li>さとの雪食品株式会社</li>
           <li><span>サンデーペイント&nbsp;</span><span>株式会社</span></li>
           <li><span>シャボン玉石けん&nbsp;</span><span>株式会社</span></li>
