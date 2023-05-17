@@ -52,10 +52,14 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     </SectionFrame>
     <div class="bread-crumbs">
       <p>
-        <NuxtLink to="/">ホーム</NuxtLink> / <NuxtLink to="/events"
-          >企画一覧</NuxtLink
-        > / <NuxtLink :to="path">{{ event?.event_name }}</NuxtLink>
+        <NuxtLink to="/">ホーム</NuxtLink> /
+        <NuxtLink to="/events">企画一覧</NuxtLink> /
+        <NuxtLink :to="path">{{ event?.event_name }}</NuxtLink>
       </p>
+    </div>
+    <div class="tag-wrapper">
+      <span class="tag-place">{{ placeToString(event?.place_id) + event?.place_name }}</span>
+      <span class="tag-place">{{ genreToString(event?.event_genre) }}</span>
     </div>
     <div class="icon-image-wraooer">
       <img :src="iconURL" @error="showNoImage" class="event-icon-image" />
@@ -84,6 +88,7 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
   }
 
   .org-name {
+    color: #3b3b3b;
     margin: 0;
     padding: 8px 20px;
     position: absolute;
@@ -104,8 +109,20 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     text-decoration: none;
 
     &:hover {
-      color: #3b3b3b
+      color: #3b3b3b;
     }
+  }
+}
+.tag-wrapper {
+  max-width: min(40em, 90%);
+  margin: 0 auto;
+
+  .tag-place {
+    padding: 3px 12px;
+    border: 1px solid #3b3b3b;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    margin-right: 4px
   }
 }
 .icon-image-wraooer {
