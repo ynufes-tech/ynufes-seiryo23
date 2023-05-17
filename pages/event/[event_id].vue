@@ -19,6 +19,7 @@ interface Event {
 }
 
 const route = useRoute();
+const path = route.fullPath;
 const event = events.find(
   (event) => event.id === Number(route.params.event_id)
 );
@@ -49,15 +50,22 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
       <p class="event-name">{{ event?.event_name }}</p>
       <p class="org-name">{{ event?.org_name }}</p>
     </SectionFrame>
+    <div class="bread-crumbs">
+      <p>
+        <NuxtLink to="/">ホーム</NuxtLink> / <NuxtLink to="/events"
+          >企画一覧</NuxtLink
+        > / <NuxtLink :to="path">{{ event?.event_name }}</NuxtLink>
+      </p>
+    </div>
     <div class="icon-image-wraooer">
-      <img :src="iconURL" @error="showNoImage" class="event-icon-image"/>
+      <img :src="iconURL" @error="showNoImage" class="event-icon-image" />
     </div>
     <div class="description-wrapper">
       <p class="event-description" v-text="event.event_description"></p>
       <SectionTitle section-title="企画団体紹介" />
       <p class="event-description" v-text="event.org_description"></p>
     </div>
-    <PrimaryButton button-text="企画一覧へ戻る" link="/events"/>
+    <PrimaryButton button-text="企画一覧へ戻る" link="/events" />
   </div>
 </template>
 
@@ -83,6 +91,21 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     right: -12px;
     background-color: rgb(167, 255, 255);
     border-radius: 16px;
+  }
+}
+
+.bread-crumbs {
+  max-width: min(40em, 90%);
+  margin: 0 auto;
+
+  a {
+    font-size: 0.8rem;
+    color: #7b7b7b;
+    text-decoration: none;
+
+    &:hover {
+      color: #3b3b3b
+    }
   }
 }
 .icon-image-wraooer {
