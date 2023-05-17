@@ -94,9 +94,20 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
 
   .meta_area {
     h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
       font-size: 1.2rem;
       font-weight: bold;
       margin: 0;
+    }
+
+    .org_name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
     }
 
     hr {

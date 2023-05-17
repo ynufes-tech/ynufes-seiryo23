@@ -25,10 +25,11 @@ import events from "assets/data/events.json";
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  gap: 30px 2%;
+  gap: 40px 2%;
   width: 100%;
 
   > a {
+    margin-bottom: auto;
     text-decoration: none;
     color: unset;
     width: 90%;
