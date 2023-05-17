@@ -1,28 +1,14 @@
 <script lang="ts" setup>
-import events from "@/assets/data/dammy.json";
-import { Genre, genreToString } from "../../model/genre";
-import { Place, placeToString } from "../../model/place";
-
-interface Event {
-  id: number;
-  event_name: string;
-  event_description: string;
-  event_genre: Genre;
-  place_id: Place;
-  place_name: string;
-  org_name: string;
-  org_description: string;
-  org_twitter: string;
-  org_instagram: string;
-  org_facebook: string;
-  org_homepage: string;
-}
+import events from "@/assets/data/dummy.json";
+import { genreToString } from "~/model/genre";
+import { placeToString } from "~/model/place";
+import { Event } from "~/model/event";
 
 const route = useRoute();
 const path = route.fullPath;
 const event = events.find(
   (event) => event.id === Number(route.params.event_id)
-);
+) as Event;
 
 const showNoImage = function (e) {
   e.target.onerror = null;
@@ -47,10 +33,12 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
       </p>
     </div>
     <div class="tag-wrapper">
-      <span class="tag-place">{{ placeToString(event?.place_id) + event?.place_name }}</span>
+      <span class="tag-place">
+        {{ placeToString(event?.place_id) + event?.place_name }}
+      </span>
       <span class="tag-place">{{ genreToString(event?.event_genre) }}</span>
     </div>
-    <div class="icon-image-wraooer">
+    <div class="icon-image-wrapper">
       <img :src="iconURL" @error="showNoImage" class="event-icon-image" />
     </div>
     <div class="description-wrapper">
@@ -113,6 +101,7 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     }
   }
 }
+
 .tag-wrapper {
   max-width: min(40em, 90%);
   margin: 0 auto;
@@ -122,10 +111,11 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     border: 1px solid #3b3b3b;
     border-radius: 16px;
     font-size: 0.8rem;
-    margin-right: 4px
+    margin-right: 4px;
   }
 }
-.icon-image-wraooer {
+
+.icon-image-wrapper {
   width: 90%;
   max-width: min(40em, 90%);
   margin: 40px auto 0;
@@ -136,6 +126,7 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     border-radius: 20px;
   }
 }
+
 .description-wrapper {
   margin: 20px auto 0;
   max-width: min(40em, 90%);
