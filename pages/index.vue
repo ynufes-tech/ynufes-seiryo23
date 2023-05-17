@@ -18,8 +18,20 @@ useHead({
     <SectionTitle class="access-title" section-title="アクセス" />
     <div class="train-access">
       <p>横浜市営地下鉄ブルーライン「三ツ沢上町駅」より正門まで徒歩16分</p>
+      <PrimaryButton
+        button-text="三ツ沢上町駅前からのルート"
+        link="https://www.ynu.ac.jp/access/train_front.html"
+      />
       <p>相鉄線「和田町駅」より南門・南通用門まで徒歩20分</p>
+      <PrimaryButton
+        button-text="和田町駅前からのルート"
+        link="https://www.ynu.ac.jp/access/train_front.html"
+      />
       <p>相鉄・JR直通線「羽沢横浜国大駅」より北門・西門まで徒歩15分</p>
+      <PrimaryButton
+        button-text="羽沢横浜国大駅前からのルート"
+        link="https://www.ynu.ac.jp/access/train_front.html"
+      />
     </div>
     <iframe
       id="access-map"
