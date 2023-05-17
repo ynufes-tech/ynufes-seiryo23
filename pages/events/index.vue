@@ -45,10 +45,20 @@ useHead({
     color: unset;
     width: 90%;
     box-sizing: border-box;
+    transition: all 0.2s;
 
-    &:hover {
-      > div {
-        transform: scale(0.98);
+    @media (hover: hover) {
+      &:hover {
+        > div {
+          transform: scale(0.98);
+        }
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        > div {
+          transform: scale(0.98);
+        }
       }
     }
   }
