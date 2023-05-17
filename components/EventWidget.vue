@@ -106,6 +106,14 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     }
   }
 
+  &::before {
+    font-size: 0.8em;
+    content: "くわしくみる";
+    position: absolute;
+    right: 20px;
+    bottom: -8px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -128,7 +136,8 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     }
 
     h2,
-    div {
+    div,
+    &::before {
       background: linear-gradient(
         207.74deg,
         #ef98b6 12.39%,
@@ -151,10 +160,6 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     img {
       box-shadow: 0 0 0 5px #fff3;
     }
-  }
-
-  &:hover {
-    scale: 0.98;
   }
 }
 </style>
