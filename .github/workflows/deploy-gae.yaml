@@ -5,6 +5,9 @@ on:
       - 'main'
       - 'stg'
       - 'release'
+  pull_request:
+    paths:
+      - '.github/**'
 jobs:
   auto_deploy_gae:
     permissions: write-all
@@ -19,9 +22,9 @@ jobs:
       - name: 'Generate .env'
         run: |
           echo "${{ secrets.ENV_CONTENTS }}" > .env
-      - name: 'get events.json from credentials'
+      - name: Download events.json from external URL
         run: |
-          echo "${{ secrets.EVENTS_DATA }}" > ./assets/data/events.json
+          curl "${{ secrets.EVENTS_DATA_URL }}" -o ./assets/data/events.json
       - name: yarn install
         run: yarn install
       - name: yarn build
