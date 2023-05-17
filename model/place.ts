@@ -23,7 +23,7 @@ export enum Place {
   SPECIAL = 11,
 }
 
-function placeToString(place: Place): string {
+export function placeToString(place: Place): string {
   switch (place) {
     case Place.A:
       return "A";

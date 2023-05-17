@@ -13,7 +13,7 @@ export enum Genre {
   DRINK = 6,
 }
 
-function genreToString(genre: Genre): string {
+export function genreToString(genre: Genre): string {
   switch (genre) {
     case Genre.EXHIBITION:
       return "展示・体験・物販";
