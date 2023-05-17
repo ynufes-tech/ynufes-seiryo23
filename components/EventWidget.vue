@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { genreToString } from "../model/genre";
-import { placeToString } from "../model/place";
+import { genreToString } from "~/model/genre";
+import { placeToString } from "~/model/place";
 
 const props = defineProps<{
   eventData: {
@@ -31,176 +31,135 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
   <div class="event_widget">
     <img :src="iconURL" @error="showNoImage" />
     <div class="tag_area">
-      <div
-        class="event_genre"
-        v-bind:class="`event_genre_${props.eventData.event_genre}`"
-      >
-        <img class="event_genre_icon" />
-        <span>{{ genreToString(props.eventData.event_genre) }}</span>
+      <div class="meta_area">
+        <h2
+          v-text="`${props.eventData.event_name}`"
+          style="white-space: pre-wrap"
+        />
+        <hr />
+        <div class="org_name">
+          {{ props.eventData.org_name }}
+        </div>
       </div>
-      <div class="location" v-bind:class="`place_${props.eventData.place_id}`">
+      <div class="event_genre">
+        {{ genreToString(props.eventData.event_genre) }}
+      </div>
+      <div class="location">
         {{
           placeToString(props.eventData.place_id) + props.eventData.place_name
         }}
       </div>
     </div>
-    <div class="meta_area">
-      <h2
-        v-text="`${props.eventData.event_name}`"
-        style="white-space: pre-wrap"
-      />
-      <hr />
-      <div class="org_name">
-        {{ props.eventData.org_name }}
-      </div>
-    </div>
+    <hr />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .event_widget {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  width: 13.4em;
   position: relative;
-  color: #3b3b3b;
-  background: #f5f3ed;
-  border: 1px solid #000000;
-  text-overflow: ellipsis;
-  text-align: center;
+  display: flex;
+  padding: 10px 10px 10px;
+  transition: scale 0.2s ease-in-out;
+
+  * {
+    transition: all 0.2s ease-in-out;
+  }
 
   > img {
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-    width: 100%;
+    border: 1px solid #ccc;
     aspect-ratio: 1;
-    outline: solid 1px #000000;
+    width: min(30vw, 100px);
+    height: fit-content;
+    margin: auto 0;
+    border-radius: 10px;
   }
 
-  > .tag_area {
-    opacity: 0.8;
-    margin: 0.3rem 1rem;
+  .tag_area {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    color: white;
+    justify-content: space-between;
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
 
-    > .event_genre {
-      .event_genre_icon {
-        aspect-ratio: 1;
-        vertical-align: middle;
-        height: 1.2em;
-        margin: 0.1em 0 0.1em 0.1em;
-        object-fit: contain;
-      }
-
-      > span {
-        margin-left: 0.1em;
-      }
-    }
-
-    > .location {
-      color: #000000;
-      border: 1px solid #000000;
-    }
-
-    > div {
-      vertical-align: middle;
-      font-size: unquote("max(0.6rem, 0.9em)");
-      padding: 0.1em 0.3em;
-      border-radius: 0.4em;
-    }
-
-    > .event_genre_1 {
-      background-color: #b36305;
-    }
-
-    > .event_genre_2 {
-      background-color: #e32017;
-    }
-
-    > .event_genre_3 {
-      background-color: #00782a;
-    }
-
-    > .event_genre_4 {
-      background-color: #003688;
-    }
-
-    > .event_genre_5 {
-      background-color: #9b0056;
-    }
-
-    > .event_genre_6 {
-      background-color: #ee7c0e;
-    }
-
-    > .place_1 {
-      background-color: #b36305;
-    }
-
-    > .place_2 {
-      background-color: #e32017;
-    }
-
-    > .place_3 {
-      background-color: #00782a;
-    }
-
-    > .place_4 {
-      background-color: #003688;
-    }
-
-    > .place_5 {
-      background-color: #9b0056;
-    }
-
-    > .place_6 {
-      background-color: #ee7c0e;
-    }
-
-    > .place_7 {
-      background-color: #84b817;
-    }
-
-    > .place_8 {
-      background-color: #0098d4;
-    }
-
-    > .place_9 {
-      background-color: #ffcc00;
-    }
-
-    > .place_10 {
-      background-color: #ff3399;
-    }
-
-    > .place_11 {
-      background-color: #ff3399;
+    .event_genre {
+      font-size: 0.9em;
+      border: 1px solid #ccc;
+      width: fit-content;
+      padding: 2px 5px;
+      border-radius: 5px;
+      margin: 5px 0;
     }
   }
 
-  > .meta_area {
-    margin: 0.7em;
-
+  .meta_area {
     h2 {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      max-height: 2.8rem;
-      overflow: hidden;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      font-size: 1.2em;
-      line-height: 1.4rem;
-      padding: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
       margin: 0;
     }
+
+    hr {
+      border: none;
+      height: 0.5px;
+      background: #3b3b3b;
+    }
   }
 
-  > hr {
-    margin: 0;
-    padding: 0;
+  &::before {
+    font-size: 0.8em;
+    content: "くわしくみる";
+    position: absolute;
+    right: 20px;
+    bottom: -8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 1px;
+    border-radius: 2px;
+    background: #3b3b3b;
+    margin-top: 10px;
+    top: 100%;
+  }
+
+  &:hover {
+    &::after {
+      background: linear-gradient(
+        207.74deg,
+        #ecb2c6 12.39%,
+        #bbaae1 55.14%,
+        #8dc0f5 87.97%
+      );
+    }
+
+    h2,
+    div,
+    &::before {
+      background: linear-gradient(
+        207.74deg,
+        #ef98b6 12.39%,
+        #bbaae1 55.14%,
+        #8dc0f5 87.97%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta_area > hr {
+      background: linear-gradient(
+        207.74deg,
+        #ef98b6 12.39%,
+        #bbaae1 55.14%,
+        #8dc0f5 87.97%
+      );
+    }
+
+    img {
+      box-shadow: 0 0 0 5px #fff3;
+    }
   }
 }
 </style>
