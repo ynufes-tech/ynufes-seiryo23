@@ -4,6 +4,8 @@ import { genreToString } from "~/model/genre";
 import { placeToString } from "~/model/place";
 import { Event } from "~/model/event";
 
+const route = useRoute();
+const path = route.fullPath;
 const event = events.find(
   (event) => event.id === Number(route.params.event_id)
 ) as Event;
@@ -16,9 +18,6 @@ useHead({
     },
   ],
 });
-
-const route = useRoute();
-const path = route.fullPath;
 
 const showNoImage = function (e) {
   e.target.src = "/images/noimage.webp";
