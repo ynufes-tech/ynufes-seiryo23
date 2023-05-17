@@ -34,17 +34,6 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
 </script>
 
 <template>
-  <div v-if="!event">
-    <SectionFrame>
-      <p class="event-name">企画詳細ページが見つかりませんでした</p>
-    </SectionFrame>
-    <PrimaryButton
-      button-text="企画一覧へ戻る"
-      link="/events"
-      class="button-event-list"
-    />
-  </div>
-
   <div v-if="event">
     <SectionFrame>
       <p class="event-name">{{ event?.event_name }}</p>
@@ -71,12 +60,23 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     </div>
     <PrimaryButton button-text="企画一覧へ戻る" link="/events" />
   </div>
+  <div v-else>
+    <SectionFrame>
+      <p class="event-name">企画詳細ページが見つかりませんでした</p>
+    </SectionFrame>
+    <PrimaryButton
+      button-text="企画一覧へ戻る"
+      link="/events"
+      class="button-event-list"
+    />
+  </div>
 </template>
 
 <style scoped lang="scss">
 .button-event-list {
   margin-top: 20px;
 }
+
 .frame-section {
   width: 90%;
   text-align: center;
