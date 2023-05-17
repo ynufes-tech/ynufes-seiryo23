@@ -6,19 +6,21 @@ const props = defineProps<{
   eventData: {
     id: number;
     event_name: string;
-    event_description: string;
-    event_genre: number;
+    org_name: string;
     place_id: number;
     place_name: string;
-    org_name: string;
+    event_genre: number;
+    event_description: string;
     org_description: string;
     org_twitter: string;
     org_instagram: string;
     org_facebook: string;
     org_homepage: string;
   };
-}>();
-const showNoImage = function (e) {
+}>();  
+
+const showNoImage = (e: Event) => {
+  if (!(e.target instanceof HTMLInputElement)) return
   e.target.src = "/images/noimage.webp";
   e.target.onerror = null;
 };
@@ -60,11 +62,11 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
   position: relative;
   display: flex;
   padding: 10px 10px 10px;
-  transition: scale 0.2s ease-in-out;
+  transition: all 0.2s;
 
-  * {
-    transition: all 0.2s ease-in-out;
-  }
+  // * {
+  //   transition: all 0.2s ease-in-out;
+  // }
 
   > img {
     border: 1px solid #ccc;
@@ -138,40 +140,80 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     top: 100%;
   }
 
-  &:hover {
-    &::after {
-      background: linear-gradient(
-        207.74deg,
-        #ecb2c6 12.39%,
-        #bbaae1 55.14%,
-        #8dc0f5 87.97%
-      );
-    }
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        background: linear-gradient(
+          207.74deg,
+          #ecb2c6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+      }
 
-    h2,
-    div,
-    &::before {
-      background: linear-gradient(
-        207.74deg,
-        #ef98b6 12.39%,
-        #bbaae1 55.14%,
-        #8dc0f5 87.97%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+      h2,
+      div,
+      &::before {
+        background: linear-gradient(
+          207.74deg,
+          #ef98b6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-    .meta_area > hr {
-      background: linear-gradient(
-        207.74deg,
-        #ef98b6 12.39%,
-        #bbaae1 55.14%,
-        #8dc0f5 87.97%
-      );
-    }
+      .meta_area > hr {
+        background: linear-gradient(
+          207.74deg,
+          #ef98b6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+      }
 
-    img {
-      box-shadow: 0 0 0 5px #fff3;
+      img {
+        box-shadow: 0 0 0 5px #fff3;
+      }
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      &::after {
+        background: linear-gradient(
+          207.74deg,
+          #ecb2c6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+      }
+
+      h2,
+      div,
+      &::before {
+        background: linear-gradient(
+          207.74deg,
+          #ef98b6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .meta_area > hr {
+        background: linear-gradient(
+          207.74deg,
+          #ef98b6 12.39%,
+          #bbaae1 55.14%,
+          #8dc0f5 87.97%
+        );
+      }
+
+      img {
+        box-shadow: 0 0 0 5px #fff3;
+      }
     }
   }
 }

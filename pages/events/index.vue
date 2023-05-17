@@ -26,7 +26,7 @@ useHead({
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .section-title {
   margin: 0 auto;
 }
@@ -45,11 +45,21 @@ useHead({
     color: unset;
     width: 90%;
     box-sizing: border-box;
-  }
+    transition: all 0.2s;
 
-  > a:hover {
-    > div {
-      transform: scale(0.98);
+    @media (hover: hover) {
+      &:hover {
+        > div {
+          transform: scale(0.98);
+        }
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        > div {
+          transform: scale(0.98);
+        }
+      }
     }
   }
 }
