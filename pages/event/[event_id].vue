@@ -11,8 +11,8 @@ const event = events.find(
 ) as Event;
 
 const showNoImage = function (e) {
+  e.target.src = "/images/noimage.webp";
   e.target.onerror = null;
-  e.target.src = "/data/icons/events/noimage.png";
 };
 const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/icons/${event?.id
   .toString()
