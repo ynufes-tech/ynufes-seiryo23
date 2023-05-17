@@ -24,7 +24,7 @@ jobs:
           echo "${{ secrets.ENV_CONTENTS }}" > .env
       - name: 'get events.json from credentials'
         run: |
-          echo "${{ secrets.EVENTS_DATA }}" > ./assets/data/events.json
+          echo ${{ secrets.EVENTS_DATA }} > ./assets/data/events.json
       - name: yarn install
         run: yarn install
       - name: yarn build
