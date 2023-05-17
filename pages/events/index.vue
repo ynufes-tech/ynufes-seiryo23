@@ -15,7 +15,7 @@ import events from "assets/data/events.json";
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .section-title {
   margin: 0 auto;
 }
@@ -34,11 +34,11 @@ import events from "assets/data/events.json";
     color: unset;
     width: 90%;
     box-sizing: border-box;
-  }
 
-  > a:hover {
-    > div {
-      transform: scale(0.98);
+    &:hover {
+      > div {
+        transform: scale(0.98);
+      }
     }
   }
 }
