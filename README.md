@@ -2,6 +2,12 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## 企画データを以下のコマンドで管理対象外とする
+```bash
+git update-index --assume-unchanged .\assets\data\events.json
+```
+
+
 ## Setup
 
 Make sure to install the dependencies:

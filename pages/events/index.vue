@@ -1,9 +1,20 @@
 <script lang="ts" setup>
 import events from "assets/data/events.json";
+
+useHead({
+  title: "清陵祭 - 企画一覧",
+  meta: [
+    {
+      name: "description",
+      content:
+        "清陵祭の企画一覧です。清陵祭では、様々な企画を実施しています。企画の詳細はこちらからご確認ください。",
+    },
+  ],
+});
 </script>
 
 <template>
-  <SectionTitle section-title="企画検索" class="section-title" />
+  <SectionTitle section-title="企画一覧" class="section-title" />
   <div class="events-list">
     <NuxtLink
       v-for="event in events"
