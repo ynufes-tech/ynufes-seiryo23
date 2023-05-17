@@ -14,7 +14,7 @@ useHead({
 </script>
 
 <template>
-  <SectionTitle section-title="企画検索" class="section-title" />
+  <SectionTitle section-title="企画一覧" class="section-title" />
   <div class="events-list">
     <NuxtLink
       v-for="event in events"
