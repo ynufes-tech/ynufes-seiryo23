@@ -4,15 +4,25 @@ import { genreToString } from "~/model/genre";
 import { placeToString } from "~/model/place";
 import { Event } from "~/model/event";
 
-const route = useRoute();
-const path = route.fullPath;
 const event = events.find(
   (event) => event.id === Number(route.params.event_id)
 ) as Event;
+useHead({
+  title: `清陵祭 - ${event.event_name}`,
+  meta: [
+    {
+      name: "description",
+      content: `${event.event_name} 清陵祭出展企画の紹介です。${event.event_description}`,
+    },
+  ],
+});
+
+const route = useRoute();
+const path = route.fullPath;
 
 const showNoImage = function (e) {
+  e.target.src = "/images/noimage.webp";
   e.target.onerror = null;
-  e.target.src = "/data/icons/events/noimage.png";
 };
 const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/icons/${event?.id
   .toString()
@@ -27,8 +37,10 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
     </SectionFrame>
     <div class="bread-crumbs">
       <p>
-        <NuxtLink to="/">ホーム</NuxtLink> /
-        <NuxtLink to="/events">企画一覧</NuxtLink> /
+        <NuxtLink to="/">ホーム</NuxtLink>
+        /
+        <NuxtLink to="/events">企画一覧</NuxtLink>
+        /
         <NuxtLink :to="path">{{ event?.event_name }}</NuxtLink>
       </p>
     </div>

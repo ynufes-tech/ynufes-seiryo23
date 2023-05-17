@@ -1,28 +1,23 @@
 <script lang="ts" setup>
-const eventData = [];
-for (let i = 1; i < 30; i++) {
-  eventData.push({
-    id: i,
-    event_name: "お散歩サークルわかば",
-    event_description: "event_description",
-    event_genre: 1,
-    place_id: 1,
-    place_name: "place_name",
-    org_name: "org_name",
-    org_description: "org_description",
-    org_twitter: "org_twitter",
-    org_instagram: "org_instagram",
-    org_facebook: "org_facebook",
-    org_homepage: "org_homepage",
-  });
-}
+import events from "assets/data/events.json";
+
+useHead({
+  title: "清陵祭 - 企画一覧",
+  meta: [
+    {
+      name: "description",
+      content:
+        "清陵祭の企画一覧です。清陵祭では、様々な企画を実施しています。企画の詳細はこちらからご確認ください。",
+    },
+  ],
+});
 </script>
 
 <template>
-  <SectionTitle section-title="企画検索" class="section-title" />
+  <SectionTitle section-title="企画一覧" class="section-title" />
   <div class="events-list">
     <NuxtLink
-      v-for="event in eventData"
+      v-for="event in events"
       :to="`/event/${event.id}`"
       :key="event.id"
     >
@@ -41,10 +36,11 @@ for (let i = 1; i < 30; i++) {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  gap: 30px 2%;
+  gap: 40px 2%;
   width: 100%;
 
   > a {
+    margin-bottom: auto;
     text-decoration: none;
     color: unset;
     width: 90%;

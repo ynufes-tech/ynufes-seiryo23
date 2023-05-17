@@ -19,8 +19,8 @@ const props = defineProps<{
   };
 }>();
 const showNoImage = function (e) {
+  e.target.src = "/images/noimage.webp";
   e.target.onerror = null;
-  e.target.src = "/data/icons/events/noimage.png";
 };
 const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/icons/${props.eventData.id
   .toString()
@@ -45,6 +45,7 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
         {{ genreToString(props.eventData.event_genre) }}
       </div>
       <div class="location">
+        企画場所:
         {{
           placeToString(props.eventData.place_id) + props.eventData.place_name
         }}
@@ -77,7 +78,7 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
   .tag_area {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     margin-left: 10px;
     width: 100%;
     height: 100%;
@@ -93,10 +94,22 @@ const iconURL = `https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.c
   }
 
   .meta_area {
+    width: 100%;
     h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
       font-size: 1.2rem;
       font-weight: bold;
       margin: 0;
+    }
+
+    .org_name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
     }
 
     hr {
