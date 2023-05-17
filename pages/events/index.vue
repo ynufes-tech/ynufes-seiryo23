@@ -21,7 +21,13 @@ for (let i = 1; i < 30; i++) {
 <template>
   <SectionTitle section-title="企画検索" class="section-title" />
   <div class="events-list">
-    <EventWidget v-for="event in eventData" :event-data="event" />
+    <NuxtLink
+      v-for="event in eventData"
+      :to="`/event/${event.id}`"
+      :key="event.id"
+    >
+      <EventWidget :event-data="event" />
+    </NuxtLink>
   </div>
 </template>
 
@@ -38,22 +44,31 @@ for (let i = 1; i < 30; i++) {
   gap: 30px 2%;
   width: 100%;
 
-  > div {
+  > a {
+    text-decoration: none;
+    color: unset;
     width: 90%;
     box-sizing: border-box;
+  }
+
+  > a:hover {
+    > div {
+      transform: scale(0.98);
+    }
   }
 }
 
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
   .events-list {
-    > div {
+    > a {
       width: min(90%, 350px);
     }
   }
 }
+
 @media screen and (min-aspect-ratio: 1/1.4) and (min-width: 800px) {
   .events-list {
-    > div {
+    > a {
       width: min(45%, 350px);
     }
   }
@@ -61,7 +76,7 @@ for (let i = 1; i < 30; i++) {
 
 @media screen and (min-width: 1400px) {
   .events-list {
-    > div {
+    > a {
       width: min(30%, 350px);
     }
   }
