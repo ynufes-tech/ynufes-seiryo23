@@ -1,28 +1,12 @@
 <script lang="ts" setup>
-const eventData = [];
-for (let i = 1; i < 30; i++) {
-  eventData.push({
-    id: i,
-    event_name: "お散歩サークルわかば",
-    event_description: "event_description",
-    event_genre: 1,
-    place_id: 1,
-    place_name: "place_name",
-    org_name: "org_name",
-    org_description: "org_description",
-    org_twitter: "org_twitter",
-    org_instagram: "org_instagram",
-    org_facebook: "org_facebook",
-    org_homepage: "org_homepage",
-  });
-}
+import events from "assets/data/events.json";
 </script>
 
 <template>
   <SectionTitle section-title="企画検索" class="section-title" />
   <div class="events-list">
     <NuxtLink
-      v-for="event in eventData"
+      v-for="event in events"
       :to="`/event/${event.id}`"
       :key="event.id"
     >
