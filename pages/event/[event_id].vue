@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import events from "@/assets/data/dummy.json";
+import events from "assets/data/events.json";
 import { genreToString } from "~/model/genre";
 import { placeToString } from "~/model/place";
 import { Event } from "~/model/event";
