@@ -211,7 +211,68 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 4" class="time-table">4</div>
+    <div v-show="placeId == 4" class="time-table">
+      <SectionFrame>教育6号館と7号館の間</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">15 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">BaySound Jazz Orchestra</h2>
+          <p class="item-description">
+            ジャズ、ファンク、オリジナル曲など多彩な演奏をお届け。
+          </p>
+          <p class="item-warning">※雨天時: 中止</p>
+        </div>
+
+        <span class="item-end-time">16 : 15</span>
+      </div>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">17 : 50</span>
+        <div class="item-text">
+          <h2 class="item-title">R3ude & Zero to heroines</h2>
+          <p class="item-description">R3udeとLIZによるダンスパフォーマンス。</p>
+          <p class="item-warning">※雨天時: 中止</p>
+          <p class="item-warning" style="color: red">
+            ※盗撮防止のため、許可証をお持ちの方を除き撮影を禁止とさせていただきます。
+          </p>
+        </div>
+
+        <span class="item-end-time">20 : 30</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">10 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">BaySound Jazz Orchestra</h2>
+          <p class="item-description">
+            ジャズ、ファンク、オリジナル曲など多彩な演奏をお届け。
+          </p>
+          <p class="item-warning">※雨天時: 中止</p>
+        </div>
+
+        <span class="item-end-time">11 : 15</span>
+      </div>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">12 : 20</span>
+        <div class="item-text">
+          <h2 class="item-title">R3ude & Zero to heroines</h2>
+          <p class="item-description">R3udeとLIZによるダンスパフォーマンス。</p>
+          <p class="item-warning">※雨天時: 中止</p>
+          <p class="item-warning" style="color: red">
+            ※盗撮防止のため、許可証をお持ちの方を除き撮影を禁止とさせていただきます。
+          </p>
+        </div>
+
+        <span class="item-end-time">15 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
     <div v-show="placeId == 5" class="time-table">5</div>
     <div v-show="placeId == 6" class="time-table">6</div>
     <div v-show="placeId == 7" class="time-table">7</div>
