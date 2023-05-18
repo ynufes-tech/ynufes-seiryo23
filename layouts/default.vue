@@ -107,7 +107,6 @@ useHead({
     left: 0;
     position: absolute;
     height: 100vh;
-    width: fit-content;
     transform: translateX(calc(-100% + min(10vh, 40vw)));
 
     path {
