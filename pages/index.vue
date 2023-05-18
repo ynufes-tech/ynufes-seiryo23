@@ -25,12 +25,12 @@ useHead({
       <p>相鉄線「和田町駅」より南門・南通用門まで徒歩20分</p>
       <PrimaryButton
         button-text="和田町駅前からのルート"
-        link="https://www.ynu.ac.jp/access/train_front.html"
+        link="https://www.ynu.ac.jp/access/train_south.html"
       />
       <p>相鉄新横浜線「羽沢横浜国大駅」より北門・西門まで徒歩15分</p>
       <PrimaryButton
         button-text="羽沢横浜国大駅前からのルート"
-        link="https://www.ynu.ac.jp/access/train_front.html"
+        link="https://www.ynu.ac.jp/access/train_hazawa.html"
       />
     </div>
     <iframe
