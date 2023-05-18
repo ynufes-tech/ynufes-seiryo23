@@ -115,7 +115,7 @@ useHead({
   }
 }
 
-@media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
+@media (min-aspect-ratio: 5/7) and (min-width: 600px) {
   #header-mobile {
     display: none;
   }
