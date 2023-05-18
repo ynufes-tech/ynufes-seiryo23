@@ -40,6 +40,9 @@ jobs:
           short_ref=${GITHUB_REF#refs/*/}
           formatted_ref=$(echo "$short_ref" | tr '[:upper:]' '[:lower:]' | tr '/' '-')
           echo "short_ref=${formatted_ref}" >> $GITHUB_ENV
+      - name: configure production mode
+        run: |
+          echo "PRODUCTION_MODE=${{ env.short_ref == 'release' }}" >> .env
       - name: "Deploy to App Engine"
         id: "deploy"
         uses: "google-github-actions/deploy-appengine@v0"
