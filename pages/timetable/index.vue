@@ -1,12 +1,225 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const placeId = ref(1);
+const changePlace = (id: number) => {
+  placeId.value = id;
+};
+</script>
 
 <template>
-  <SectionTitle section-title="タイムテーブル" class="section-title"/>
-  <UnderConstruction />
+  <SectionTitle section-title="タイムテーブル" class="section-title" />
+  <p style="margin: 0 auto; width: fit-content">
+    タイムテーブルを表示する場所を選択してください
+  </p>
+  <div class="button-wrapper">
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 1 }"
+      @click="changePlace(1)"
+    >
+      野外音楽堂
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 2 }"
+      @click="changePlace(2)"
+    >
+      中央図書館1階メディアホール
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 3 }"
+      @click="changePlace(3)"
+    >
+      中央図書館前
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 4 }"
+      @click="changePlace(4)"
+    >
+      教育6号館と7号館の間
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 5 }"
+      @click="changePlace(5)"
+    >
+      経済・経営学部棟の間
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 6 }"
+      @click="changePlace(6)"
+    >
+      中央図書館・学生センター前ウッドデッキ
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 7 }"
+      @click="changePlace(7)"
+    >
+      多目的グラウンド
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 8 }"
+      @click="changePlace(8)"
+    >
+      大学会館4階 ホール
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 9 }"
+      @click="changePlace(9)"
+    >
+      キャンパス全域
+    </button>
+  </div>
+  <div class="time-table-wrapper">
+    <div v-show="placeId == 1" class="time-table">
+      <SectionFrame>野外音楽堂</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            野音王 <span class="item-subtitle">〜横国1の野音王はだれだ〜</span>
+          </h2>
+          <p class="item-description">
+            横国生の中から選ばれた者による野音を使った勝ち残り対決。勝ち残った者による野音のタイムアタックで野音の王、つまり野音王を決める。盛り上がること間違いなし!
+          </p>
+        </div>
+
+        <span class="item-end-time">14 : 40</span>
+      </div>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            ;序 <span class="item-subtitle">〜横国1の野音王はだれだ〜</span>
+          </h2>
+          <p class="item-description">
+            横国生の中から選ばれた者による野音を使った勝ち残り対決。勝ち残った者による野音のタイムアタックで野音の王、つまり野音王を決める。盛り上がること間違いなし!
+          </p>
+        </div>
+
+        <span class="item-end-time">14 : 40</span>
+      </div>
+    </div>
+    <div v-show="placeId == 2" class="time-table">2</div>
+    <div v-show="placeId == 3" class="time-table">3</div>
+    <div v-show="placeId == 4" class="time-table">4</div>
+    <div v-show="placeId == 5" class="time-table">5</div>
+    <div v-show="placeId == 6" class="time-table">6</div>
+    <div v-show="placeId == 7" class="time-table">7</div>
+    <div v-show="placeId == 8" class="time-table">8</div>
+    <div v-show="placeId == 9" class="time-table">9</div>
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .section-title {
   margin: 0 auto;
+}
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: min(40em, 90%);
+  margin: 0 auto;
+  padding: 16px 0;
+
+  .select-button {
+    color: #3b3b3b;
+    text-decoration: none;
+    background-color: transparent;
+    margin: 4px;
+    width: fit-content;
+    padding: 6px 16px;
+    border: 1px solid #3b3b3b;
+    border-radius: 16px;
+  }
+  .selected {
+    background-color: #3b3b3b;
+    color: #fff;
+  }
+}
+
+.time-table {
+  max-width: min(40em, 90%);
+  margin: 0 auto;
+  .frame-section {
+    margin: 40px 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .day-1,
+  .day-2 {
+    font-size: 1.5rem;
+  }
+  .time-table-item {
+    margin: 0 0 0 20px;
+    padding: 20px;
+    border-left: 1px solid #3b3b3b;
+    position: relative;
+
+    .item-text {
+      margin: 20px 0;
+      .item-title {
+        font-size: 1.5rem;
+        .item-subtitle {
+          font-size: 1rem;
+        }
+      }
+      .item-description {
+        margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+    }
+
+    .item-start-time {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      font-size: 1.2rem;
+    }
+    .item-end-time {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      font-size: 1.2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background-color: #3b3b3b;
+      border-radius: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background-color: #3b3b3b;
+      border-radius: 100%;
+    }
+  }
+  .duration-box {
+    margin: 0 0 0 20px;
+    width: 100%;
+    height: 100px;
+    border-left: 3px dashed #3b3b3b;
+  }
 }
 </style>
