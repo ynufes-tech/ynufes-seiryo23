@@ -382,8 +382,67 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 8" class="time-table">8</div>
-    <div v-show="placeId == 9" class="time-table">9</div>
+    <div v-show="placeId == 8" class="time-table">
+      <SectionFrame>大学会館4階ホール</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            清陵祭コンサート
+            <span class="item-subtitle">by 横浜国立大学吹奏楽団</span>
+          </h2>
+          <p class="item-description">
+            吹奏楽曲からポップス曲までさまざまな曲を お届けします♪
+          </p>
+        </div>
+
+        <span class="item-end-time">14 : 30</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            清陵祭コンサート
+            <span class="item-subtitle">by 横浜国立大学吹奏楽団</span>
+          </h2>
+          <p class="item-description">
+            吹奏楽曲からポップス曲までさまざまな曲を お届けします♪
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">14 : 30</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
+    <div v-show="placeId == 9" class="time-table">
+      <h2 class="day-1">1日目(土)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">19 : 40</span>
+        <div class="item-text">
+          <h2 class="item-title">橙</h2>
+          <p class="item-description">
+            コロナ禍で絶えかけた学生の活気は
+            空前の灯とも喩えられるほど儚かった。
+            今や清陵祭を開催できるほど復活を遂げた。 行く末の“あかるさ”を願い、
+            今宵夜空に華を咲かせよう。
+          </p>
+          <p class="item-warning">※雨天・荒天・強風時: 中止</p>
+        </div>
+
+        <span class="item-end-time">19 : 55</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+    </div>
   </div>
 </template>
 
