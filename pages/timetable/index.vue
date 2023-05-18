@@ -422,6 +422,7 @@ const changePlace = (id: number) => {
       <div class="duration-box"></div>
     </div>
     <div v-show="placeId == 9" class="time-table">
+      <SectionFrame>キャンパス全域</SectionFrame>
       <h2 class="day-1">1日目(土)</h2>
       <div class="duration-box"></div>
       <div class="time-table-item">
