@@ -112,14 +112,11 @@ useFetch("/api/slides").then((res) => {
 }
 
 #home-carousel {
-  margin: 0 20px;
-
   .the-carousel {
     border-radius: 20px;
     margin: 0 auto 20px;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 800px;
+    width: min(90vw, 700px, calc(100% - 20px));
     aspect-ratio: 2;
 
     img {
