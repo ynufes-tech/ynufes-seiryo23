@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.4.3"
+    "nuxt": "^3.4.3",
+    "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.0.0-1",
