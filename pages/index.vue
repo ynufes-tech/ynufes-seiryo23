@@ -1,4 +1,11 @@
 <script lang="ts" setup>
+import { SlideInfo } from "~/model/slide";
+import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 useHead({
   title: "清陵祭2023 公式HP トップ",
   meta: [
@@ -9,9 +16,35 @@ useHead({
     },
   ],
 });
+
+const slidesData = ref([] as SlideInfo);
+useFetch("/api/slides").then((res) => {
+  const slides = res.data.value as SlideInfo[];
+  console.log(slides);
+  slides.forEach((slide) => {
+    slidesData.value.push(slide);
+  });
+});
 </script>
 
 <template>
+  <div id="home-carousel">
+    <swiper
+      :autoplay="true"
+      :centered-slides="true"
+      :loop="true"
+      :modules="[Pagination, Autoplay]"
+      :navigation="false"
+      :pagination="{ clickable: true }"
+      :space-between="10"
+      class="the-carousel"
+    >
+      <swiper-slide v-for="slide in slidesData as SlideInfo[]" :key="slide.id"
+        ><img :src="slide.img?.url" class="swiper-image"
+      /></swiper-slide>
+    </swiper>
+  </div>
+
   <DateCircle />
   <SponsorsView />
   <div class="access">
@@ -35,13 +68,13 @@ useHead({
     </div>
     <iframe
       id="access-map"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3249.248346481359!2d139.5865167!3d35.4733988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2z5qiq5rWc5Zu956uL5aSn5a2m!5e0!3m2!1sja!2sjp!4v1683509810519!5m2!1sja!2sjp"
-      width="600"
-      height="450"
-      style="border: 0"
       allowfullscreen
+      height="450"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3249.248346481359!2d139.5865167!3d35.4733988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2z5qiq5rWc5Zu956uL5aSn5a2m!5e0!3m2!1sja!2sjp!4v1683509810519!5m2!1sja!2sjp"
+      style="border: 0"
+      width="600"
     ></iframe>
   </div>
 </template>
@@ -75,6 +108,24 @@ useHead({
     border-radius: 12px;
     max-width: 90vw;
     aspect-ratio: 1;
+  }
+}
+
+#home-carousel {
+  margin: 0 20px;
+
+  .the-carousel {
+    border-radius: 20px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 2;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>
