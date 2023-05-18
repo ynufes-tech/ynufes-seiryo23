@@ -307,7 +307,42 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 6" class="time-table">6</div>
+    <div v-show="placeId == 6" class="time-table">
+      <SectionFrame>中央図書館・学生センター前のウッドデッキ</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">14 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            ダンス部パフォーマンス
+            <span class="item-subtitle">by 横浜国立大学モダンダンス部</span>
+          </h2>
+          <p class="item-description">モダンダンス部の作品を披露いたします。</p>
+          <p class="item-warning">雨天時: 中止</p>
+        </div>
+
+        <span class="item-end-time">15 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">12 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            アカペラストリートライブ
+            <span class="item-subtitle">by Stairways</span>
+          </h2>
+          <p class="item-description">アカペラストリートライブを行います！</p>
+          <p class="item-warning">雨天時: 教育6号館101教室</p>
+        </div>
+
+        <span class="item-end-time">13 : 30</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
     <div v-show="placeId == 7" class="time-table">7</div>
     <div v-show="placeId == 8" class="time-table">8</div>
     <div v-show="placeId == 9" class="time-table">9</div>
