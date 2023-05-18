@@ -343,7 +343,45 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 7" class="time-table">7</div>
+    <div v-show="placeId == 7" class="time-table">
+      <SectionFrame>多目的グラウンド</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">12 : 30</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            ソフトボール大会
+            <span class="item-subtitle">by ペルソナーズ</span>
+          </h2>
+          <p class="item-description">
+            ソフトボール大会を開催します。自由にチームを作って参加しよう！事前予約制です。
+          </p>
+        </div>
+
+        <span class="item-end-time">15 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">09 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            ソフトボール大会
+            <span class="item-subtitle">by ペルソナーズ</span>
+          </h2>
+          <p class="item-description">
+            ソフトボール大会を開催します。自由にチームを作って参加しよう！事前予約制です。
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">15 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
     <div v-show="placeId == 8" class="time-table">8</div>
     <div v-show="placeId == 9" class="time-table">9</div>
   </div>
