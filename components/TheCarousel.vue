@@ -46,7 +46,7 @@ const props = withDefaults(defineProps<Props>(), {
     }
   }
 }
-@media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
+@media screen and (min-aspect-ratio: 5/7) and (min-width: 600px) {
   .swiper {
     width: 80%;
 

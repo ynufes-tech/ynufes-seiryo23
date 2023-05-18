@@ -64,27 +64,21 @@ useHead({
   }
 }
 
-@media screen and (min-aspect-ratio: 1/1.4) and (min-width: 600px) {
-  .events-list {
-    > a {
-      width: min(90%, 350px);
-    }
+@media (min-aspect-ratio: 5/7) and (min-width: 600px) {
+  .events-list > a {
+    width: min(90%, 350px);
   }
 }
 
-@media screen and (min-aspect-ratio: 1/1.4) and (min-width: 800px) {
-  .events-list {
-    > a {
-      width: min(45%, 350px);
-    }
+@media (min-aspect-ratio: 5/7) and (min-width: 800px) {
+  .events-list > a {
+    width: min(45%, 350px);
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .events-list {
-    > a {
-      width: min(30%, 350px);
-    }
+@media (min-width: 1400px) {
+  .events-list > a {
+    width: min(30%, 350px);
   }
 }
 </style>
