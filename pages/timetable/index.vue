@@ -79,6 +79,8 @@ const changePlace = (id: number) => {
     <div v-show="placeId == 1" class="time-table">
       <SectionFrame>野外音楽堂</SectionFrame>
       <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
       <div class="time-table-item">
         <span class="item-start-time">13 : 30</span>
         <div class="item-text">
@@ -129,6 +131,21 @@ const changePlace = (id: number) => {
 
       <div class="duration-box"></div>
       <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">Grand &#9734; Finale</h2>
+          <p class="item-description">
+            清陵祭を締めくくる最後の企画！ ゲーム性を持たせたコーナ を中心に、
+            観客参加型で全員が楽しめる企画です。
+          </p>
+          <p class="item-warning">※ 雨天時: 経営2号館109教室特設ステージ</p>
+        </div>
+
+        <span class="item-end-time">14 : 10</span>
+      </div>
+      <div class="duration-box"></div>
     </div>
     <div v-show="placeId == 2" class="time-table">2</div>
     <div v-show="placeId == 3" class="time-table">3</div>
@@ -246,7 +263,7 @@ const changePlace = (id: number) => {
   .duration-box {
     margin: 0 0 0 19px;
     width: 100%;
-    height: 100px;
+    height: 60px;
     border-left: 3px dashed #3b3b3b;
   }
 }
