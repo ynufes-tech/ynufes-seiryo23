@@ -273,7 +273,40 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 5" class="time-table">5</div>
+    <div v-show="placeId == 5" class="time-table">
+      <SectionFrame>経済・経営学部棟の間</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">清陵FM</h2>
+          <p class="item-description">
+            放送研究会によるラジオの生放送。「清陵FM、朝から夜まで生放送中！面白い番組が盛りだくさん」
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">20 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">09 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">清陵FM</h2>
+          <p class="item-description">
+            放送研究会によるラジオの生放送。「清陵FM、朝から夜まで生放送中！面白い番組が盛りだくさん」
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">15 : 00</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
     <div v-show="placeId == 6" class="time-table">6</div>
     <div v-show="placeId == 7" class="time-table">7</div>
     <div v-show="placeId == 8" class="time-table">8</div>
