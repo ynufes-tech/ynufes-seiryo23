@@ -8,5 +8,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         id: config.public.google_analytics_id,
       },
     });
+  } else {
+    console.log("Google Analytics is disabled.", config.public.production_mode);
   }
 });

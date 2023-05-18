@@ -22,6 +22,16 @@ jobs:
       - name: "Generate .env"
         run: |
           echo "${{ secrets.ENV_CONTENTS }}" > .env
+      - name: "Extract branch name"
+        id: branch-name
+        shell: bash
+        run: |
+          short_ref=${GITHUB_REF#refs/*/}
+          formatted_ref=$(echo "$short_ref" | tr '[:upper:]' '[:lower:]' | tr '/' '-')
+          echo "short_ref=${formatted_ref}" >> $GITHUB_ENV
+      - name: configure production mode
+        run: |
+          echo "PRODUCTION_MODE=${{ env.short_ref == 'release' }}" >> .env
       - name: Download events.json from external URL
         run: |
           curl "${{ secrets.EVENTS_DATA_URL }}" -o ./assets/data/events.json
@@ -33,16 +43,6 @@ jobs:
         uses: "google-github-actions/auth@v0"
         with:
           credentials_json: "${{ secrets.GCP_SA_KEY }}"
-      - name: "Extract branch name"
-        id: branch-name
-        shell: bash
-        run: |
-          short_ref=${GITHUB_REF#refs/*/}
-          formatted_ref=$(echo "$short_ref" | tr '[:upper:]' '[:lower:]' | tr '/' '-')
-          echo "short_ref=${formatted_ref}" >> $GITHUB_ENV
-      - name: configure production mode
-        run: |
-          echo "PRODUCTION_MODE=${{ env.short_ref == 'release' }}" >> .env
       - name: "Deploy to App Engine"
         id: "deploy"
         uses: "google-github-actions/deploy-appengine@v0"
