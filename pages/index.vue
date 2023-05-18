@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 useHead({
   title: "清陵祭2023 公式HP トップ",
@@ -17,20 +17,28 @@ useHead({
   ],
 });
 
-const slidesData = ref([] as SlideInfo);
+const slidesData = ref([] as SlideInfo[]);
+const loaded = ref(false);
 useFetch("/api/slides").then((res) => {
   const slides = res.data.value as SlideInfo[];
   console.log(slides);
   slides.forEach((slide) => {
     slidesData.value.push(slide);
   });
+  // shuffle slides
+  slidesData.value.sort(() => Math.random() - 0.5);
+  loaded.value = true;
 });
 </script>
 
 <template>
   <div id="home-carousel">
     <swiper
-      :autoplay="true"
+      v-if="loaded"
+      :autoplay="{
+        delay: 7000,
+        disableOnInteraction: false,
+      }"
       :centered-slides="true"
       :loop="true"
       :modules="[Pagination, Autoplay]"
