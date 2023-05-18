@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["~/assets/style/reset.css"],
+  runtimeConfig: {
+    public: {
+      google_analytics_id: process.env.GOOGLE_ANALYTICS_ID,
+      production_mode: process.env.PRODUCTION_MODE,
+    },
+  },
   modules: [
     [
       "@nuxtjs/google-fonts",
