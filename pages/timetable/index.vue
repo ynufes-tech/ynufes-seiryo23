@@ -88,24 +88,47 @@ const changePlace = (id: number) => {
           <p class="item-description">
             横国生の中から選ばれた者による野音を使った勝ち残り対決。勝ち残った者による野音のタイムアタックで野音の王、つまり野音王を決める。盛り上がること間違いなし!
           </p>
+          <p class="item-warning">※ 雨天時: 中止</p>
         </div>
 
         <span class="item-end-time">14 : 40</span>
       </div>
+
       <div class="duration-box"></div>
+
       <div class="time-table-item">
-        <span class="item-start-time">13 : 30</span>
+        <span class="item-start-time">15 : 30</span>
         <div class="item-text">
-          <h2 class="item-title">
-            ;序 <span class="item-subtitle">〜横国1の野音王はだれだ〜</span>
-          </h2>
+          <h2 class="item-title">;序</h2>
           <p class="item-description">
-            横国生の中から選ばれた者による野音を使った勝ち残り対決。勝ち残った者による野音のタイムアタックで野音の王、つまり野音王を決める。盛り上がること間違いなし!
+            参加型クイズ企画です。上位3名には豪華景品が!!
+            途中参加はできませんので、時間に注意して参加してください。
           </p>
+          <p class="item-warning">※ 雨天時: 経営2号館109教室特設ステージ</p>
         </div>
 
-        <span class="item-end-time">14 : 40</span>
+        <span class="item-end-time">17 : 00</span>
       </div>
+
+      <div class="duration-box"></div>
+
+      <div class="time-table-item">
+        <span class="item-start-time">18 : 55</span>
+        <div class="item-text">
+          <h2 class="item-title">ミスミスター トークショー</h2>
+          <p class="item-description">
+            例年7月から11月に活動しているミスミスター横国ですが、
+            今回は彼らにせまるべく、 トークイベントを開催します！
+            初出しの活動秘話が聞けちゃうかも...??
+          </p>
+          <p class="item-warning">※ 雨天時: 経営2号館109教室特設ステージ</p>
+        </div>
+
+        <span class="item-end-time">20 : 00</span>
+      </div>
+
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
     </div>
     <div v-show="placeId == 2" class="time-table">2</div>
     <div v-show="placeId == 3" class="time-table">3</div>
@@ -179,6 +202,11 @@ const changePlace = (id: number) => {
         font-size: 0.8rem;
         line-height: 1.2rem;
       }
+      .item-warning {
+        margin: 0;
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
     }
 
     .item-start-time {
@@ -216,7 +244,7 @@ const changePlace = (id: number) => {
     }
   }
   .duration-box {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 19px;
     width: 100%;
     height: 100px;
     border-left: 3px dashed #3b3b3b;
