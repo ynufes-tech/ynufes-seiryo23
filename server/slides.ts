@@ -22,14 +22,13 @@ async function updateSlides() {
       queries: { limit: 100 },
     })
     .then((res) => {
-      console.log(res);
       res.contents.forEach((slide) => {
-        data.push(slide);
+        newData.push(slide);
       });
       data = newData;
     });
 }
 
-await updateSlides();
+updateSlides().then();
 
 export { getSlides, updateSlides };
