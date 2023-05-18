@@ -6,9 +6,9 @@ const changePlace = (id: number) => {
 </script>
 
 <template>
-  <SectionTitle section-title="タイムテーブル" class="section-title" />
+  <SectionTitle section-title="タイムライン" class="section-title" />
   <p style="margin: 0 auto; width: fit-content">
-    タイムテーブルを表示する場所を選択してください
+    タイムラインを表示する場所を選択してください
   </p>
   <div class="button-wrapper">
     <button
@@ -147,8 +147,70 @@ const changePlace = (id: number) => {
       </div>
       <div class="duration-box"></div>
     </div>
-    <div v-show="placeId == 2" class="time-table">2</div>
-    <div v-show="placeId == 3" class="time-table">3</div>
+    <div v-show="placeId == 2" class="time-table">
+      <SectionFrame>中央図書館1階メディアホール</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 50</span>
+        <div class="item-text">
+          <h2 class="item-title">
+            YNUトークショー!! In 23清陵
+            <span class="item-subtitle">〜横国のすべて魅せます〜</span>
+          </h2>
+          <p class="item-description">
+            横国生の日常を知りたいそこのあなた!! 横国の先生方の講義や
+            横国生のトークショーへ ぜひお越しください！
+          </p>
+          <p class="item-warning"></p>
+        </div>
+      </div>
+
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+    </div>
+    <div v-show="placeId == 3" class="time-table">
+      <SectionFrame>中央図書館前</SectionFrame>
+      <h2 class="day-1">1日目(土)</h2>
+
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">13 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">23清陵祭グランプリ&#9834;</h2>
+          <p class="item-description">
+            清陵祭の企画の中から選んで投票していただき、
+            グランプリを決定します。
+            また、投票された方には景品が当たるチャンスも！
+            是非、ご参加ください。
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">16 : 20</span>
+      </div>
+      <div class="duration-box"></div>
+      <h2 class="day-2">2日目(日)</h2>
+      <div class="duration-box"></div>
+      <div class="time-table-item">
+        <span class="item-start-time">10 : 00</span>
+        <div class="item-text">
+          <h2 class="item-title">23清陵祭グランプリ&#9834;</h2>
+          <p class="item-description">
+            清陵祭の企画の中から選んで投票していただき、
+            グランプリを決定します。
+            また、投票された方には景品が当たるチャンスも！
+            是非、ご参加ください。
+          </p>
+          <p class="item-warning"></p>
+        </div>
+
+        <span class="item-end-time">11 : 20</span>
+      </div>
+      <div class="duration-box"></div>
+    </div>
     <div v-show="placeId == 4" class="time-table">4</div>
     <div v-show="placeId == 5" class="time-table">5</div>
     <div v-show="placeId == 6" class="time-table">6</div>
