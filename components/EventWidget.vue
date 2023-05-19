@@ -17,10 +17,10 @@ const props = defineProps<{
     org_facebook: string;
     org_homepage: string;
   };
-}>();  
+}>();
 
 const showNoImage = (e: Event) => {
-  if (!(e.target instanceof HTMLInputElement)) return
+  if (!(e.target instanceof HTMLInputElement)) return;
   e.target.src = "/images/noimage.webp";
   e.target.onerror = null;
 };

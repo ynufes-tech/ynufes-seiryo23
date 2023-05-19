@@ -3,7 +3,9 @@
 <template>
   <div class="sorry-description">
     <h1 class="sorry-heading">このページは現在未公開となっております</h1>
-    <p>このページは現在作成中です。ページの公開まで今しばらくお待ちください。</p>
+    <p>
+      このページは現在作成中です。ページの公開まで今しばらくお待ちください。
+    </p>
   </div>
   <div class="speech-bubble"><p class="momesen-comment">待ってもめ〜</p></div>
   <div class="kamome-senpai">

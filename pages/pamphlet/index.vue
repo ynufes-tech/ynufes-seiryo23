@@ -13,14 +13,21 @@ useHead({
 <template>
   <SectionTitle section-title="パンフレット" class="section-title" />
   <div class="content-wrapper">
-
-  <p>下のボタンから23年度清陵祭の電子版パンフレットをダウンロードいただけます。</p>
-  <div class="button-wrapper">
-    <PrimaryButton button-text="通常版 (67.0M)" link="https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/pamphlet_seiryo23.pdf" />
-    <PrimaryButton button-text="軽量版 (17.8M)" link="https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/pamphlet_seiryo23-light.pdf" />
+    <p>
+      下のボタンから23年度清陵祭の電子版パンフレットをダウンロードいただけます。
+    </p>
+    <div class="button-wrapper">
+      <PrimaryButton
+        button-text="通常版 (67.0M)"
+        link="https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/pamphlet_seiryo23.pdf"
+      />
+      <PrimaryButton
+        button-text="軽量版 (17.8M)"
+        link="https://storage.googleapis.com/ynufes-seiryo23-deploy.appspot.com/pamphlet_seiryo23-light.pdf"
+      />
+    </div>
   </div>
-  </div>
-  <PrimaryButton button-text="ホームへ戻る" link="/" class="back-home"/>
+  <PrimaryButton button-text="ホームへ戻る" link="/" class="back-home" />
 </template>
 
 <style scoped lang="scss">
