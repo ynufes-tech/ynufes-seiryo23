@@ -21,7 +21,7 @@
           <NuxtLink to="/events">企画一覧</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/timetable">タイムテーブル</NuxtLink>
+          <NuxtLink to="/timetable">タイムライン</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/pamphlet">パンフレット</NuxtLink>

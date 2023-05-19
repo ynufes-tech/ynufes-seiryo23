@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+useHead({
+  title: "清陵祭 - タイムライン",
+  meta: [
+    {
+      name: "description",
+      content: "特別な場所で行われる企画の日時はこちらからご確認いただけます。",
+    },
+  ],
+});
 const placeId = ref(1);
 const changePlace = (id: number) => {
   placeId.value = id;
@@ -445,6 +454,72 @@ const changePlace = (id: number) => {
       <div class="duration-box"></div>
     </div>
   </div>
+  <div class="button-wrapper">
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 1 }"
+      @click="changePlace(1)"
+    >
+      野外音楽堂
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 2 }"
+      @click="changePlace(2)"
+    >
+      中央図書館1階メディアホール
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 3 }"
+      @click="changePlace(3)"
+    >
+      中央図書館前
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 4 }"
+      @click="changePlace(4)"
+    >
+      教育6号館と7号館の間
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 5 }"
+      @click="changePlace(5)"
+    >
+      経済・経営学部棟の間
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 6 }"
+      @click="changePlace(6)"
+    >
+      中央図書館・学生センター前ウッドデッキ
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 7 }"
+      @click="changePlace(7)"
+    >
+      多目的グラウンド
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 8 }"
+      @click="changePlace(8)"
+    >
+      大学会館4階 ホール
+    </button>
+    <button
+      class="select-button"
+      :class="{ selected: placeId == 9 }"
+      @click="changePlace(9)"
+    >
+      キャンパス全域
+    </button>
+  </div>
+  <PrimaryButton button-text="ホームへ戻る" link="/" />
 </template>
 
 <style scoped lang="scss">
@@ -456,7 +531,7 @@ const changePlace = (id: number) => {
   flex-wrap: wrap;
   justify-content: center;
   max-width: min(40em, 90%);
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 16px 0;
 
   .select-button {
