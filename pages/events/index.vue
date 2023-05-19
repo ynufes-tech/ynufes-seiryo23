@@ -24,6 +24,7 @@ useHead({
       <EventWidget :event-data="event" />
     </NuxtLink>
   </div>
+  <PrimaryButton button-text="ホームに戻る" link="/" class="back-home" />
 </template>
 
 <style scoped lang="scss">
@@ -80,5 +81,8 @@ useHead({
   .events-list > a {
     width: min(30%, 350px);
   }
+}
+.back-home {
+  margin-top: 60px;
 }
 </style>
