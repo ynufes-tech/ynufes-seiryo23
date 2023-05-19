@@ -437,7 +437,7 @@ const changePlace = (id: number) => {
       <div class="time-table-item">
         <span class="item-start-time">19 : 40</span>
         <div class="item-text">
-          <h2 class="item-title">橙</h2>
+          <h2 class="item-title">燈</h2>
           <p class="item-description">
             コロナ禍で絶えかけた学生の活気は
             空前の灯とも喩えられるほど儚かった。
