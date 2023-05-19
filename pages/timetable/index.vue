@@ -519,7 +519,7 @@ const changePlace = (id: number) => {
       キャンパス全域
     </button>
   </div>
-  <PrimaryButton button-text="ホームへ戻る" link="/" />
+  <PrimaryButton button-text="ホームに戻る" link="/" />
 </template>
 
 <style scoped lang="scss">
