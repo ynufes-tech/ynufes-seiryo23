@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "清陵祭 - タイムライン",
+  title: "清陵祭 - タイムスケジュール",
   meta: [
     {
       name: "description",
@@ -15,9 +15,9 @@ const changePlace = (id: number) => {
 </script>
 
 <template>
-  <SectionTitle section-title="タイムライン" class="section-title" />
+  <SectionTitle section-title="タイムスケジュール" class="section-title" />
   <p style="margin: 0 auto; width: fit-content">
-    タイムラインを表示する場所を選択してください
+    タイムスケジュールを表示する場所を選択してください
   </p>
   <div class="button-wrapper">
     <button
