@@ -35,7 +35,7 @@ const close = () => {
               <NuxtLink to="/events" @click="close">企画一覧</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/timetable" @click="close">タイムライン</NuxtLink>
+              <NuxtLink to="/timetable" @click="close">タイムスケジュール</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/pamphlet" @click="close">パンフレット</NuxtLink>
