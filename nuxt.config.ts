@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {baseURL} from "nuxt/dist/core/runtime/nitro/paths";
-
 export default defineNuxtConfig({
-
   css: ["~/assets/style/reset.css"],
   runtimeConfig: {
     public: {
@@ -24,7 +21,7 @@ export default defineNuxtConfig({
     ],
   ],
   app: {
-    baseURL:process.env.BASE_URL?process.env.BASE_URL:"/",
+    baseURL: process.env.BASE_URL ? process.env.BASE_URL : "/",
     head: {
       htmlAttrs: {
         lang: "ja",
