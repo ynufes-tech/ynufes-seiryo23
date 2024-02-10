@@ -54,7 +54,6 @@ useFetch("/api/slides").then((res) => {
   </div>
 
   <DateCircle />
-  <SponsorsView />
   <div class="access">
     <SectionTitle class="access-title" section-title="アクセス" />
     <div class="train-access">
