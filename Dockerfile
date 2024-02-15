@@ -21,10 +21,10 @@ COPY --from=builder /app/.nuxt ./.nuxt
 
 ENV HOST=0.0.0.0
 
-ENV PORT=8080
+ENV PORT=8081
 #環境変数の設定
 
 CMD ["node" ,"./.output/server/index.mjs"]
 #--containerを作成するときに実行されるコマンド
 
-EXPOSE 8080
+EXPOSE 8081
