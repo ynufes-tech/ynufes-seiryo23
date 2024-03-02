@@ -19,7 +19,6 @@ useHead({
       <br />
       &emsp;ご協賛いただきました企業を以下に掲載させていただきます。
     </SectionFrame>
-    <LazySponsorsView />
     <div>
       <hr />
       <section class="sponsor-section">
