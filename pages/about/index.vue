@@ -2,15 +2,15 @@
 const conf = useRuntimeConfig();
 const basePath = conf.public.base_url;
 const imageList = [
-  "/images/22-seiryo-images/about1.webp",
-  "/images/22-seiryo-images/about2.webp",
-  "/images/22-seiryo-images/about3.webp",
-  "/images/22-seiryo-images/about4.webp",
-  "/images/22-seiryo-images/about5.webp",
-  "/images/22-seiryo-images/about6.webp",
-  "/images/22-seiryo-images/about7.webp",
-  "/images/22-seiryo-images/about8.webp",
-  "/images/22-seiryo-images/about9.webp",
+  "images/22-seiryo-images/about1.webp",
+  "images/22-seiryo-images/about2.webp",
+  "images/22-seiryo-images/about3.webp",
+  "images/22-seiryo-images/about4.webp",
+  "images/22-seiryo-images/about5.webp",
+  "images/22-seiryo-images/about6.webp",
+  "images/22-seiryo-images/about7.webp",
+  "images/22-seiryo-images/about8.webp",
+  "images/22-seiryo-images/about9.webp",
 ].map((path) => basePath + path);
 useHead({
   title: "清陵祭 - 清陵祭について",
