@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     public: {
       google_analytics_id: process.env.GOOGLE_ANALYTICS_ID,
       production_mode: process.env.PRODUCTION_MODE,
+      base_url: process.env.BASE_URL,
     },
     microCMSServiceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     microCMSApiKey: process.env.MICROCMS_API_KEY,

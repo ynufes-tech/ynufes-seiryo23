@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
     :navigation="true"
     class="the-carousel"
   >
-    <swiper-slide v-for="image in imageList" :key="image"
+    <swiper-slide v-for="image in props.imageList" :key="image"
       ><img :src="image" class="swiper-image"
     /></swiper-slide>
   </swiper>
