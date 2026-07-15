@@ -23,5 +23,6 @@
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "microcms-js-sdk": "^2.4.0",
     "swiper": "^9.4.1"
-  }
+  },
+  "packageManager": "pnpm@10.13.1"
 }
