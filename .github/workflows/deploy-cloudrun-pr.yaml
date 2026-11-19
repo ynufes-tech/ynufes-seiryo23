@@ -46,10 +46,7 @@ jobs:
       - name: configure production mode
         run: |
           echo "PRODUCTION_MODE=false" >> .env
-      - name: Download events.json from external URL
-        run: |
-          curl "${{ secrets.EVENTS_DATA_URL }}" -o ./assets/data/events.json
-      # custom step for seiryo23 ends here
+      # Archive event data is versioned with the source to keep rebuilds reproducible.
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5

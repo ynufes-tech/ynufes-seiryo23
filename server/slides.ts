@@ -1,12 +1,12 @@
 import { createClient } from "microcms-js-sdk";
-import { SlideInfo } from "~/model/slide";
+import type { SlideInfo } from "~/model/slide";
 
 const config = useRuntimeConfig();
 
-const client = createClient({
+const client = config.microCMSServiceDomain && config.microCMSApiKey ? createClient({
   serviceDomain: config.microCMSServiceDomain,
   apiKey: config.microCMSApiKey,
-});
+}) : undefined;
 
 let data = [] as SlideInfo[];
 
@@ -15,6 +15,7 @@ function getSlides(): SlideInfo[] {
 }
 
 async function updateSlides() {
+  if (!client) return;
   const newData = [] as SlideInfo[];
   await client
     .getList<SlideInfo>({
@@ -29,6 +30,8 @@ async function updateSlides() {
     });
 }
 
-updateSlides().then();
+updateSlides().catch(() => {
+  console.error("Unable to refresh the archived slides");
+});
 
-export { getSlides, updateSlides };
+export { getSlides };
