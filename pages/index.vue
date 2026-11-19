@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { SlideInfo } from "~/model/slide";
-import { Autoplay, Pagination } from "swiper";
+import type { SlideInfo } from "~/model/slide";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";

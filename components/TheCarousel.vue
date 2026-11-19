@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Autoplay, Navigation } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 interface Props {
   imageList?: string[];

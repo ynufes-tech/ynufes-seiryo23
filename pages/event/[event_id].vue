@@ -2,7 +2,7 @@
 import events from "assets/data/events.json";
 import { genreToString } from "~/model/genre";
 import { placeToString } from "~/model/place";
-import { Event } from "~/model/event";
+import type { Event } from "~/model/event";
 
 const route = useRoute();
 const path = route.fullPath;

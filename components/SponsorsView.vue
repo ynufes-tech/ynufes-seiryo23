@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-import SwiperCore, { Autoplay } from "swiper";
+import SwiperCore from "swiper";
+import { Autoplay } from "swiper/modules";
 
 SwiperCore.use([Autoplay]);
 
